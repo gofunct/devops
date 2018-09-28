@@ -1,72 +1,81 @@
+# Steps
+### Install Client Tools
+### Create Network Resources for VPC, Controllers, & Workers
+### Create Certificate Authority from json config
+### Create the following certificates from the certificate authority: 
+* admin-key.pem
+* admin.pem
+* worker-0-key.pem
+* worker-0.pem
+* worker-1-key.pem
+* worker-1.pem
+* worker-2-key.pem
+* worker-2.pem
+* kube-controller-manager-key.pem
+* kube-controller-manager.pem
+* kube-proxy-key.pem
+* kube-proxy.pem
+* kube-scheduler-key.pem
+* kube-scheduler.pem
+* kubernetes-key.pem
+* kubernetes.pem
+* service-account-key.pem
+* service-account.pem
+
+### Create Authentication Configs from the Certificates
+Generate kubeconfig files for the:
+* controller manager 
+* kubelet
+* kube-proxy 
+* scheduler cliente
+* the admin user
+
+### Generate an encryption key
+### Generate the encryption config from the encryption key
+### Copy the encryption config to the controllers
+### Configure & Start etcd on all controllers
+### Bootstrap the Controllers
+### Bootstrap the Worker Nodes
+
+
+# Study
+
 ***
 
-## Download and install cfssl and cfssljson from the cfssl repository:
+## Certificate files are generated from..?
 
 <details><summary>show</summary>
 <p>
 
-* OSX
 
-```
-brew install cfssl
+* ca.pem 
+* ca-key.pem
+* csr.json file
+* generated with cfssl and cfssl json
 
 
-```
-* Linux
-
-```
-wget -q --show-progress --https-only --timestamping \
-  https://pkg.cfssl.org/R1.2/cfssl_linux-amd64 \
-  https://pkg.cfssl.org/R1.2/cfssljson_linux-amd64
-chmod +x cfssl_linux-amd64 cfssljson_linux-amd64
-sudo mv cfssl_linux-amd64 /usr/local/bin/cfssl
-sudo mv cfssljson_linux-amd64 /usr/local/bin/cfssljson
-```
 </p>
 </details>
 
 ***
 
-## Install kubectl
-
-
-<details><summary>show</summary>
-<p>
-
-* OSX
-
-```bash
-
-curl -o kubectl https://storage.googleapis.com/kubernetes-release/release/v1.10.2/bin/darwin/amd64/kubectl
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/
-
-```
-
-* Linux
-
-```bash
-
-wget https://storage.googleapis.com/kubernetes-release/release/v1.10.2/bin/linux/amd64/kubectl
-chmod +x kubectl
-sudo mv kubectl /usr/local/bin/
-
-```
-
-</p>
-</details>
-
-***
-
-## Generate the CA configuration file, certificate, and private key:
-
-
+## Certificate authority is generated from..?
 
 <details><summary>show</summary>
 <p>
 
-```bash
+ca-config.json file that specifies:
 
+* server auth, client auth
+
+ca-csr.json specifies:
+* location 
+* name
+* rsa 2048
+
+
+
+```
 {
 
 cat > ca-config.json <<EOF
@@ -107,52 +116,287 @@ EOF
 cfssl gencert -initca ca-csr.json | cfssljson -bare ca
 
 }
+```
+
+</p>
+</details>
+
+***
+
+## The kube-proxy, kube-controller-manager, kube-scheduler, and kubelet client certificates will be used to..?
+
+<details><summary>show</summary>
+<p>
+
+client authentication configuration files
+
+</p>
+</details>
+
+***
+
+## What keys are copied to workers?
+
+<details><summary>show</summary>
+<p>
+
+```
+ca.pem ${instance}-key.pem ${instance}.pem
 
 ```
 
 </p>
 </details>
 
+***
+
+## What keys are copied to the controllers?
+
+<details><summary>show</summary>
+<p>
+
+ca.pem 
+ca-key.pem 
+kubernetes-key.pem 
+kubernetes.pem
+service-account-key.pem 
+service-account.pem
+
+</p>
+</details>
 
 ***
 
-## Generate the admin client certificate and private key:
+## What configs are copied to the workers?
 
+<details><summary>show</summary>
+<p>
 
+* ${instance}.kubeconfig 
+* kube-proxy.kubeconfig
+
+</p>
+</details>
+
+***
+
+## What kubeconfigs are copied to the controllers?
 
 <details><summary>show</summary>
 <p>
 
 ```
-{
+* admin.kubeconfig 
+* kube-controller-manager.kubeconfig 
+* kube-scheduler.kubeconfig 
 
-cat > admin-csr.json <<EOF
+```
+
+</p>
+</details>
+
+***
+
+## How do you generate kubeconfig files from certificates using kubectl?
+
+<details><summary>show</summary>
+<p>
+
+* kubectl set-cluster with cert-auth, embedded certs, server addr, and the designated kubeconfig
+* kubectl set-credentials with designated system, client cert, client key, embedded certs, and set the kubeconfig
+* kubectl set-context to default, system user, and kubeconfig
+* kubectl config use-context default with desired kubeconfig
+
+Example for kube-controller-manager:
+
+```
 {
-  "CN": "admin",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "system:masters",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
-    }
-  ]
+  kubectl config set-cluster kubernetes-the-hard-way \
+    --certificate-authority=ca.pem \
+    --embed-certs=true \
+    --server=https://127.0.0.1:6443 \
+    --kubeconfig=kube-controller-manager.kubeconfig
+
+  kubectl config set-credentials system:kube-controller-manager \
+    --client-certificate=kube-controller-manager.pem \
+    --client-key=kube-controller-manager-key.pem \
+    --embed-certs=true \
+    --kubeconfig=kube-controller-manager.kubeconfig
+
+  kubectl config set-context default \
+    --cluster=kubernetes-the-hard-way \
+    --user=system:kube-controller-manager \
+    --kubeconfig=kube-controller-manager.kubeconfig
+
+  kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconfig
 }
+```
+
+</p>
+</details>
+
+***
+
+## How do you generate an encryption key?
+
+<details><summary>show</summary>
+<p>
+
+```
+ENCRYPTION_KEY=$(head -c 32 /dev/urandom | base64)
+
+```
+
+</p>
+</details>
+
+***
+
+## How do you generate an encryption configuration for controllers?
+
+<details><summary>show</summary>
+<p>
+* Need the encryption key
+
+```
+cat > encryption-config.yaml <<EOF
+kind: EncryptionConfig
+apiVersion: v1
+resources:
+  - resources:
+      - secrets
+    providers:
+      - aescbc:
+          keys:
+            - name: key1
+              secret: ${ENCRYPTION_KEY}
+      - identity: {}
+EOF
+```
+
+</p>
+</details>
+
+***
+
+## What is etcd used for?
+
+<details><summary>show</summary>
+<p>
+
+* storing cluster state
+* located on controllers
+
+</p>
+</details>
+
+***
+
+## How do you configure the etcd server?
+
+<details><summary>show</summary>
+<p>
+**must be configured on each controller**
+
+1. Create the directories /etc/etcd and /var/lib/etcd and add them to your path
+2. Copy ca.pem, kubernetes-key.pem, kubernetes.pem to /etc/etcd/ directory
+
+```
+
+{
+  sudo mkdir -p /etc/etcd /var/lib/etcd
+  sudo cp ca.pem kubernetes-key.pem kubernetes.pem /etc/etcd/
+}
+
+```
+
+3. Set the internal ip of each controller 
+
+```
+
+INTERNAL_IP=$(curl -s -H "Metadata-Flavor: Google" \
+  http://metadata.google.internal/computeMetadata/v1/instance/network-interfaces/0/ip)
+```
+4. Set the etcd name to match the hostname of the current compute instance
+```
+ETCD_NAME=$(hostname -s)
+
+```
+
+5. Create the etcd.service systemd unit file
+
+```
+
+cat <<EOF | sudo tee /etc/systemd/system/etcd.service
+[Unit]
+Description=etcd
+Documentation=https://github.com/coreos
+
+[Service]
+ExecStart=/usr/local/bin/etcd \\
+  --name ${ETCD_NAME} \\
+  --cert-file=/etc/etcd/kubernetes.pem \\
+  --key-file=/etc/etcd/kubernetes-key.pem \\
+  --peer-cert-file=/etc/etcd/kubernetes.pem \\
+  --peer-key-file=/etc/etcd/kubernetes-key.pem \\
+  --trusted-ca-file=/etc/etcd/ca.pem \\
+  --peer-trusted-ca-file=/etc/etcd/ca.pem \\
+  --peer-client-cert-auth \\
+  --client-cert-auth \\
+  --initial-advertise-peer-urls https://${INTERNAL_IP}:2380 \\
+  --listen-peer-urls https://${INTERNAL_IP}:2380 \\
+  --listen-client-urls https://${INTERNAL_IP}:2379,https://127.0.0.1:2379 \\
+  --advertise-client-urls https://${INTERNAL_IP}:2379 \\
+  --initial-cluster-token etcd-cluster-0 \\
+  --initial-cluster controller-0=https://10.240.0.10:2380,controller-1=https://10.240.0.11:2380,controller-2=https://10.240.0.12:2380 \\
+  --initial-cluster-state new \\
+  --data-dir=/var/lib/etcd
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
 EOF
 
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -profile=kubernetes \
-  admin-csr.json | cfssljson -bare admin
+```
 
+6. Start the etcd server
+
+```
+
+{
+  sudo systemctl daemon-reload
+  sudo systemctl enable etcd
+  sudo systemctl start etcd
 }
+
+```
+
+7. Verify 
+
+```
+
+sudo ETCDCTL_API=3 etcdctl member list \
+  --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/etcd/ca.pem \
+  --cert=/etc/etcd/kubernetes.pem \
+  --key=/etc/etcd/kubernetes-key.pem
+```
+
+
+
+</p>
+</details>
+
+***
+
+## How do you create the Kubernetes config directory?
+
+<details><summary>show</summary>
+<p>
+
+```
+sudo mkdir -p /etc/kubernetes/config
 
 
 ```
@@ -160,285 +404,584 @@ cfssl gencert \
 </p>
 </details>
 
+***
+
+## What should you move to /usr/local/bin when bootstrapping the control plane?
+
+<details><summary>show</summary>
+<p>
+**make executable**
+
+* kube-apiserver 
+* kube-controller-manager 
+* kube-scheduler 
+* kubectl
+* etcd 
+
+
+</p>
+</details>
 
 ***
 
-## Generate a certificate and private key for each Kubernetes worker node:
-
-
+## What should be moved to /var/lib/kubernetes when bootstrapping the control plane?
 
 <details><summary>show</summary>
 <p>
 
-```bAH
-for instance in worker-0 worker-1 worker-2; do
-cat > ${instance}-csr.json <<EOF
+```
+* ca.pem 
+* ca-key.pem 
+* kubernetes-key.pem 
+* kubernetes.pem 
+* service-account-key.pem 
+* service-account.pem 
+* encryption-config.yaml
+* kube-controller-manager.kubeconfig
+* kube-scheduler.kubeconfig
+* 
+* 
+```
+
+</p>
+</details>
+
+***
+
+## What should you move to /etc/systemd/system/ when bootstraping the controle plane?
+
+<details><summary>show</summary>
+<p>
+
+* kube-apiserver.service
+* kube-controller-manager.service
+* kube-scheduler.service
+* 
+* 
+
+</p>
+</details>
+
+***
+
+## How do you start the controller services?
+
+<details><summary>show</summary>
+<p>
+
+```
 {
-  "CN": "system:node:${instance}",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "system:nodes",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
-    }
-  ]
+  sudo systemctl daemon-reload
+  sudo systemctl enable kube-apiserver kube-controller-manager kube-scheduler
+  sudo systemctl start kube-apiserver kube-controller-manager kube-scheduler
+}
+
+```
+
+</p>
+</details>
+
+***
+
+## What do you need for controller health-checks?
+
+<details><summary>show</summary>
+<p>
+* A basic web server
+
+```
+sudo apt-get install -y nginx
+```
+
+* Configure NGINX
+
+```
+cat > kubernetes.default.svc.cluster.local <<EOF
+server {
+  listen      80;
+  server_name kubernetes.default.svc.cluster.local;
+
+  location /healthz {
+     proxy_pass                    https://127.0.0.1:6443/healthz;
+     proxy_ssl_trusted_certificate /var/lib/kubernetes/ca.pem;
+  }
 }
 EOF
+```
 
-EXTERNAL_IP=$(gcloud compute instances describe ${instance} \
-  --format 'value(networkInterfaces[0].accessConfigs[0].natIP)')
+* mv config to /etc/nginx/sites-available/kubernetes.default.svc.cluster.local
 
-INTERNAL_IP=$(gcloud compute instances describe ${instance} \
-  --format 'value(networkInterfaces[0].networkIP)')
+```
+{
+  sudo mv kubernetes.default.svc.cluster.local \
+    /etc/nginx/sites-available/kubernetes.default.svc.cluster.local
 
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -hostname=${instance},${EXTERNAL_IP},${INTERNAL_IP} \
-  -profile=kubernetes \
-  ${instance}-csr.json | cfssljson -bare ${instance}
-done
+  sudo ln -s /etc/nginx/sites-available/kubernetes.default.svc.cluster.local /etc/nginx/sites-enabled/
+}
+```
+* Start the NGINX service
+
+```
+sudo systemctl restart nginx
+sudo systemctl enable nginx
+
+```
+* Verify
+
+```
+kubectl get componentstatuses --kubeconfig admin.kubeconfig
+
+```
+* Test access
+
+```
+curl -H "Host: kubernetes.default.svc.cluster.local" -i http://127.0.0.1/healthz
+
 ```
 
 </p>
 </details>
 
-
 ***
 
-## Generate the kube-controller-manager client certificate and private key:
-
-
+## Why do you need RBAC for kubelet on worker nodes?
 
 <details><summary>show</summary>
 <p>
 
-```
-{
+**Access to the Kubelet API from the Kubernetes API is required for retrieving:**
 
-cat > kube-controller-manager-csr.json <<EOF
-{
-  "CN": "system:kube-controller-manager",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "system:kube-controller-manager",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
-    }
-  ]
-}
+* metrics
+* logs
+* executing commands in pods
+
+</p>
+</details>
+
+***
+
+## What do you need to create to let the Kubernetes API server on the controllers communicate with the kubelet api on each worker?
+
+<details><summary>show</summary>
+<p>
+
+* system:kube-apiserver-to-kubelet ClusterRole
+
+```
+cat <<EOF | kubectl apply --kubeconfig admin.kubeconfig -f -
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRole
+metadata:
+  annotations:
+    rbac.authorization.kubernetes.io/autoupdate: "true"
+  labels:
+    kubernetes.io/bootstrapping: rbac-defaults
+  name: system:kube-apiserver-to-kubelet
+rules:
+  - apiGroups:
+      - ""
+    resources:
+      - nodes/proxy
+      - nodes/stats
+      - nodes/log
+      - nodes/spec
+      - nodes/metrics
+    verbs:
+      - "*"
 EOF
 
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -profile=kubernetes \
-  kube-controller-manager-csr.json | cfssljson -bare kube-controller-manager
+```
 
-}
+The Kubernetes API Server authenticates to the Kubelet as the kubernetes user using the client certificate as defined by the --kubelet-client-certificate flag.
+
+</p>
+</details>
+
+***
+
+## A ClusterRole must be bound between what to components to activate communication between the Kubernetes API and the kubelet api?
+
+<details><summary>show</summary>
+<p>
+
+* system:kube-apiserver-to-kubelet & kubernetes user
+
+```
+cat <<EOF | kubectl apply --kubeconfig admin.kubeconfig -f -
+apiVersion: rbac.authorization.k8s.io/v1beta1
+kind: ClusterRoleBinding
+metadata:
+  name: system:kube-apiserver
+  namespace: ""
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: system:kube-apiserver-to-kubelet
+subjects:
+  - apiGroup: rbac.authorization.k8s.io
+    kind: User
+    name: kubernetes
+EOF
+```
+
+</p>
+</details>
+
+***
+
+## What should the external load balancer attach to?
+
+<details><summary>show</summary>
+<p>
+
+* The kubernetes-the-hard-way static IP address 
+
+</p>
+</details>
+
+***
+
+## After setting up the external load balancer, how can you check the Kubernetes version info?
+
+<details><summary>show</summary>
+<p>
+
+```
+curl --cacert ca.pem https://${KUBERNETES_PUBLIC_ADDRESS}:6443/version
+
 
 ```
 
 </p>
 </details>
 
-
 ***
 
-## Generate the kube-proxy client certificate and private key:
-
-
+## What needs to be installed on each worker node to bootstrap?
 
 <details><summary>show</summary>
 <p>
 
+**Each component needs a config file in /etc/{component}/{config.toml}**
+**Each component needs a service file in /etc/systemd/system/{component}.service**
+
+* runc
+* gVisor
+* container networking plugins
+* containerd
+* kubelet
+* kube-proxy
+* socat
+* conntrack
+* ipset
+
+
+
+**Download socat,contrack,ipset**
 ```
 {
+  sudo apt-get update
+  sudo apt-get -y install socat conntrack ipset
+}
+```
 
-cat > kube-proxy-csr.json <<EOF
+**Download Binaries**
+
+```
+wget -q --show-progress --https-only --timestamping \
+  https://github.com/kubernetes-incubator/cri-tools/releases/download/v1.0.0-beta.0/crictl-v1.0.0-beta.0-linux-amd64.tar.gz \
+  https://storage.googleapis.com/kubernetes-the-hard-way/runsc \
+  https://github.com/opencontainers/runc/releases/download/v1.0.0-rc5/runc.amd64 \
+  https://github.com/containernetworking/plugins/releases/download/v0.6.0/cni-plugins-amd64-v0.6.0.tgz \
+  https://github.com/containerd/containerd/releases/download/v1.1.0/containerd-1.1.0.linux-amd64.tar.gz \
+  https://storage.googleapis.com/kubernetes-release/release/v1.10.2/bin/linux/amd64/kubectl \
+  https://storage.googleapis.com/kubernetes-release/release/v1.10.2/bin/linux/amd64/kube-proxy \
+  https://storage.googleapis.com/kubernetes-release/release/v1.10.2/bin/linux/amd64/kubelet
+```
+
+**Make the installation directiories**
+
+```
+sudo mkdir -p \
+  /etc/cni/net.d \
+  /opt/cni/bin \
+  /var/lib/kubelet \
+  /var/lib/kube-proxy \
+  /var/lib/kubernetes \
+  /var/run/kubernetes
+```
+
+**Install the binaries**
+
+```
 {
-  "CN": "system:kube-proxy",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "system:node-proxier",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
+  chmod +x kubectl kube-proxy kubelet runc.amd64 runsc
+  sudo mv runc.amd64 runc
+  sudo mv kubectl kube-proxy kubelet runc runsc /usr/local/bin/
+  sudo tar -xvf crictl-v1.0.0-beta.0-linux-amd64.tar.gz -C /usr/local/bin/
+  sudo tar -xvf cni-plugins-amd64-v0.6.0.tgz -C /opt/cni/bin/
+  sudo tar -xvf containerd-1.1.0.linux-amd64.tar.gz -C /
+}
+```
+
+
+</p>
+</details>
+
+***
+
+## What do you need to do to configure CNI plugins?
+
+<details><summary>show</summary>
+<p>
+
+**The pod''s CIDR range**
+
+```
+POD_CIDR=$(curl -s -H "Metadata-Flavor: Google" \
+  http://metadata.google.internal/computeMetadata/v1/instance/attributes/pod-cidr)
+
+```
+
+**a bridge network config**
+
+```
+cat <<EOF | sudo tee /etc/cni/net.d/10-bridge.conf
+{
+    "cniVersion": "0.3.1",
+    "name": "bridge",
+    "type": "bridge",
+    "bridge": "cnio0",
+    "isGateway": true,
+    "ipMasq": true,
+    "ipam": {
+        "type": "host-local",
+        "ranges": [
+          [{"subnet": "${POD_CIDR}"}]
+        ],
+        "routes": [{"dst": "0.0.0.0/0"}]
     }
-  ]
 }
 EOF
-
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -profile=kubernetes \
-  kube-proxy-csr.json | cfssljson -bare kube-proxy
-
-}
-
 ```
 
-</p>
-</details>
-
-
-***
-
-## Generate the kube-scheduler client certificate and private key:
-
-
-
-<details><summary>show</summary>
-<p>
+**a loopback network config**
 
 ```
+cat <<EOF | sudo tee /etc/cni/net.d/99-loopback.conf
 {
-
-cat > kube-scheduler-csr.json <<EOF
-{
-  "CN": "system:kube-scheduler",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "system:kube-scheduler",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
-    }
-  ]
+    "cniVersion": "0.3.1",
+    "type": "loopback"
 }
 EOF
-
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -profile=kubernetes \
-  kube-scheduler-csr.json | cfssljson -bare kube-scheduler
-
-}
-
-
 ```
 
 </p>
 </details>
 
-
 ***
 
-## Generate the Kubernetes API Server certificate and private key:
-
+## How do you need to configure the CNI containerd?
 
 <details><summary>show</summary>
 <p>
 
+**A config file**
+
 ```
+sudo mkdir -p /etc/containerd/
+cat << EOF | sudo tee /etc/containerd/config.toml
+[plugins]
+  [plugins.cri.containerd]
+    snapshotter = "overlayfs"
+    [plugins.cri.containerd.default_runtime]
+      runtime_type = "io.containerd.runtime.v1.linux"
+      runtime_engine = "/usr/local/bin/runc"
+      runtime_root = ""
+    [plugins.cri.containerd.untrusted_workload_runtime]
+      runtime_type = "io.containerd.runtime.v1.linux"
+      runtime_engine = "/usr/local/bin/runsc"
+      runtime_root = "/run/containerd/runsc"
+EOF
+```
+* Untrusted workloads will be run using the gVisor (runsc) runtime.
 
-{
+**a containerd.service systemd unit file**
 
-KUBERNETES_PUBLIC_ADDRESS=$(gcloud compute addresses describe kubernetes-the-hard-way \
-  --region $(gcloud config get-value compute/region) \
-  --format 'value(address)')
 
-cat > kubernetes-csr.json <<EOF
-{
-  "CN": "kubernetes",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "Kubernetes",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
-    }
-  ]
-}
+```
+cat <<EOF | sudo tee /etc/systemd/system/containerd.service
+[Unit]
+Description=containerd container runtime
+Documentation=https://containerd.io
+After=network.target
+
+[Service]
+ExecStartPre=/sbin/modprobe overlay
+ExecStart=/bin/containerd
+Restart=always
+RestartSec=5
+Delegate=yes
+KillMode=process
+OOMScoreAdjust=-999
+LimitNOFILE=1048576
+LimitNPROC=infinity
+LimitCORE=infinity
+
+[Install]
+WantedBy=multi-user.target
 EOF
 
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -hostname=10.32.0.1,10.240.0.10,10.240.0.11,10.240.0.12,${KUBERNETES_PUBLIC_ADDRESS},127.0.0.1,kubernetes.default \
-  -profile=kubernetes \
-  kubernetes-csr.json | cfssljson -bare kubernetes
-
-}
-
 ```
 
 </p>
 </details>
 
-
 ***
 
-## Generate the service-account certificate and private key:
-
+## How do you configure the Kubelet when bootstraping the worker nodes? 
 
 <details><summary>show</summary>
 <p>
 
+Configure the Kubelet
+
+```
+{
+  sudo mv ${HOSTNAME}-key.pem ${HOSTNAME}.pem /var/lib/kubelet/
+  sudo mv ${HOSTNAME}.kubeconfig /var/lib/kubelet/kubeconfig
+  sudo mv ca.pem /var/lib/kubernetes/
+}
 ```
 
-{
+**a kubelet-config.yaml configuration file**
 
-cat > service-account-csr.json <<EOF
-{
-  "CN": "service-accounts",
-  "key": {
-    "algo": "rsa",
-    "size": 2048
-  },
-  "names": [
-    {
-      "C": "US",
-      "L": "Portland",
-      "O": "Kubernetes",
-      "OU": "Kubernetes The Hard Way",
-      "ST": "Oregon"
-    }
-  ]
-}
+```
+cat <<EOF | sudo tee /var/lib/kubelet/kubelet-config.yaml
+kind: KubeletConfiguration
+apiVersion: kubelet.config.k8s.io/v1beta1
+authentication:
+  anonymous:
+    enabled: false
+  webhook:
+    enabled: true
+  x509:
+    clientCAFile: "/var/lib/kubernetes/ca.pem"
+authorization:
+  mode: Webhook
+clusterDomain: "cluster.local"
+clusterDNS:
+  - "10.32.0.10"
+podCIDR: "${POD_CIDR}"
+runtimeRequestTimeout: "15m"
+tlsCertFile: "/var/lib/kubelet/${HOSTNAME}.pem"
+tlsPrivateKeyFile: "/var/lib/kubelet/${HOSTNAME}-key.pem"
+EOF
+```
+
+**a kubelet.service systemd unit file**
+
+
+```
+cat <<EOF | sudo tee /etc/systemd/system/kubelet.service
+[Unit]
+Description=Kubernetes Kubelet
+Documentation=https://github.com/kubernetes/kubernetes
+After=containerd.service
+Requires=containerd.service
+
+[Service]
+ExecStart=/usr/local/bin/kubelet \\
+  --config=/var/lib/kubelet/kubelet-config.yaml \\
+  --container-runtime=remote \\
+  --container-runtime-endpoint=unix:///var/run/containerd/containerd.sock \\
+  --image-pull-progress-deadline=2m \\
+  --kubeconfig=/var/lib/kubelet/kubeconfig \\
+  --network-plugin=cni \\
+  --register-node=true \\
+  --v=2
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
 EOF
 
-cfssl gencert \
-  -ca=ca.pem \
-  -ca-key=ca-key.pem \
-  -config=ca-config.json \
-  -profile=kubernetes \
-  service-account-csr.json | cfssljson -bare service-account
 
+```
+
+</p>
+</details>
+
+***
+
+## What components are being added to what directories when bootsrapping worker nodes?
+
+<details><summary>show</summary>
+<p>
+
+**Installation Directories**
+
+1. /user/local/bin
+* kubectl 
+* kube-proxy 
+* kubelet 
+* runc 
+* runsc
+* crictl
+
+2. /etc/cni/net.d 
+* b10-bridge.conf
+* 99-loopback.conf
+
+3. /opt/cni/bin 
+* cni-plugins
+
+4. /var/lib/kubelet 
+* ${HOSTNAME}-key.pem 
+* ${HOSTNAME}.pem
+* kubelet-config.yaml
+
+5. /var/lib/kubelet/kubeconfig/
+* ${HOSTNAME}.kubeconfig
+
+6. /var/lib/kube-proxy 
+
+7. /var/lib/kube-proxy/kubeconfig
+* kube-proxy.kubeconfig
+
+6. /var/lib/kubernetes
+* ca.pem
+
+7. /var/run/kubernetes
+
+8. /
+* containerd
+
+9. /etc/containerd/
+* config.toml
+
+10. /etc/systemd/service/
+* containerd.service
+* kubelet.service
+* kube-proxy.service
+
+
+</p>
+</details>
+
+***
+
+## How do you start worker services after bootsraping them?
+
+<details><summary>show</summary>
+<p>
+
+```
+{
+  sudo systemctl daemon-reload
+  sudo systemctl enable containerd kubelet kube-proxy
+  sudo systemctl start containerd kubelet kube-proxy
 }
 
 ```
@@ -446,53 +989,41 @@ cfssl gencert \
 </p>
 </details>
 
-
 ***
 
-## Copy the appropriate certificates and private keys to each worker instance:
-
-
+## How do you verify that the worker bootstrap was successful?
 
 <details><summary>show</summary>
 <p>
 
 ```
-for instance in worker-0 worker-1 worker-2; do
-  gcloud compute scp ca.pem ${instance}-key.pem ${instance}.pem ${instance}:~/
-done
-
+gcloud compute ssh controller-0 \
+  --command "kubectl get nodes --kubeconfig admin.kubeconfig"
 
 ```
 
 </p>
 </details>
 
+***
+
+# Configuring Kubectl for Remote Access
 
 ***
 
-## Copy the appropriate certificates and private keys to each controller instance:
-
-
+## What does each config file point to?
 
 <details><summary>show</summary>
 <p>
 
-```
-for instance in controller-0 controller-1 controller-2; do
-  gcloud compute scp ca.pem ca-key.pem kubernetes-key.pem kubernetes.pem \
-    service-account-key.pem service-account.pem ${instance}:~/
-done
-
-
-```
+* the external load balancer fronting the Kubernetes API Servers
 
 </p>
 </details>
 
-
 ***
 
-## Title
+## How do you configure re
 
 <details><summary>show</summary>
 <p>
@@ -600,20 +1131,3 @@ done
 
 </p>
 </details>
-
-
-***
-
-## Title
-
-<details><summary>show</summary>
-<p>
-
-```
-
-
-```
-
-</p>
-</details>
-
