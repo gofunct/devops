@@ -6,24 +6,30 @@ by: Coleman Word
 - [Certified Kubernetes Administrator Exam Prep](#certified-kubernetes-administrator-exam-prep)
 - [Overview](#overview)
 - [Questions](#questions)
+- [Provisioning a CA and Generating TLS Certificates](#provisioning-a-ca-and-generating-tls-certificates)
   - [Certificate files are generated from..?](#certificate-files-are-generated-from)
   - [Certificate authority is generated from..?](#certificate-authority-is-generated-from)
   - [The kube-proxy, kube-controller-manager, kube-scheduler, and kubelet client certificates will be used to..?](#the-kube-proxy-kube-controller-manager-kube-scheduler-and-kubelet-client-certificates-will-be-used-to)
   - [What keys are copied to workers?](#what-keys-are-copied-to-workers)
   - [What keys are copied to the controllers?](#what-keys-are-copied-to-the-controllers)
+- [Generating Kubernetes Configuration Files for Authentication](#generating-kubernetes-configuration-files-for-authentication)
   - [What configs are copied to the workers?](#what-configs-are-copied-to-the-workers)
   - [What kubeconfigs are copied to the controllers?](#what-kubeconfigs-are-copied-to-the-controllers)
   - [How do you generate kubeconfig files from certificates using kubectl?](#how-do-you-generate-kubeconfig-files-from-certificates-using-kubectl)
+- [Generating the Data Encryption Config and Key](#generating-the-data-encryption-config-and-key)
   - [How do you generate an encryption key?](#how-do-you-generate-an-encryption-key)
   - [How do you generate an encryption configuration for controllers?](#how-do-you-generate-an-encryption-configuration-for-controllers)
+- [Bootstrapping the etcd Cluster](#bootstrapping-the-etcd-cluster)
   - [What is etcd used for?](#what-is-etcd-used-for)
   - [How do you configure the etcd server?](#how-do-you-configure-the-etcd-server)
+- [Bootstrapping the Kubernetes Control Plane](#bootstrapping-the-kubernetes-control-plane)
   - [How do you create the Kubernetes config directory?](#how-do-you-create-the-kubernetes-config-directory)
   - [What should you move to /usr/local/bin when bootstrapping the control plane?](#what-should-you-move-to-usrlocalbin-when-bootstrapping-the-control-plane)
   - [What should be moved to /var/lib/kubernetes when bootstrapping the control plane?](#what-should-be-moved-to-varlibkubernetes-when-bootstrapping-the-control-plane)
   - [What should you move to /etc/systemd/system/ when bootstraping the controle plane?](#what-should-you-move-to-etcsystemdsystem-when-bootstraping-the-controle-plane)
   - [How do you start the controller services?](#how-do-you-start-the-controller-services)
   - [What do you need for controller health-checks?](#what-do-you-need-for-controller-health-checks)
+- [Bootstrapping the Kubernetes Worker Nodes](#bootstrapping-the-kubernetes-worker-nodes)
   - [Why do you need RBAC for kubelet on worker nodes?](#why-do-you-need-rbac-for-kubelet-on-worker-nodes)
   - [What do you need to create to let the Kubernetes API server on the controllers communicate with the kubelet api on each worker?](#what-do-you-need-to-create-to-let-the-kubernetes-api-server-on-the-controllers-communicate-with-the-kubelet-api-on-each-worker)
   - [A ClusterRole must be bound between what to components to activate communication between the Kubernetes API and the kubelet api?](#a-clusterrole-must-be-bound-between-what-to-components-to-activate-communication-between-the-kubernetes-api-and-the-kubelet-api)
@@ -40,11 +46,14 @@ by: Coleman Word
   - [What does each config file point to?](#what-does-each-config-file-point-to)
   - [How do you Generate a kubeconfig file suitable for authenticating as the admin user?](#how-do-you-generate-a-kubeconfig-file-suitable-for-authenticating-as-the-admin-user)
   - [How can you check cluster health after setting up the config for remote admin auth?](#how-can-you-check-cluster-health-after-setting-up-the-config-for-remote-admin-auth)
+- [Provisioning Pod Network Routes](#provisioning-pod-network-routes)
   - [How can you enable pods to communicate with eachother?](#how-can-you-enable-pods-to-communicate-with-eachother)
   - [Print the internal IP address and Pod CIDR range for each worker instance:](#print-the-internal-ip-address-and-pod-cidr-range-for-each-worker-instance)
   - [Create network routes for each worker instance:](#create-network-routes-for-each-worker-instance)
+- [Deploying the DNS Cluster Add-on](#deploying-the-dns-cluster-add-on)
   - [How do you implement DNS based service discovery?](#how-do-you-implement-dns-based-service-discovery)
   - [How can you execute a DNS lookup for a kubernetes service inside a pod?](#how-can-you-execute-a-dns-lookup-for-a-kubernetes-service-inside-a-pod)
+- [Smoke Test](#smoke-test)
   - [How can you encrypt secret data at rest?](#how-can-you-encrypt-secret-data-at-rest)
   - [How can you enable port forwarding to an nginx deployment?](#how-can-you-enable-port-forwarding-to-an-nginx-deployment)
   - [How do you retrieve logs from containers?](#how-do-you-retrieve-logs-from-containers)
@@ -61,6 +70,8 @@ by: Coleman Word
 ***
 
 # Questions
+
+# Provisioning a CA and Generating TLS Certificates
 
 ***
 
@@ -189,6 +200,11 @@ service-account.pem
 
 ***
 
+# Generating Kubernetes Configuration Files for Authentication
+
+
+***
+
 ## What configs are copied to the workers?
 
 <details><summary>show</summary>
@@ -259,6 +275,11 @@ Example for kube-controller-manager:
 
 ***
 
+# Generating the Data Encryption Config and Key
+
+
+***
+
 ## How do you generate an encryption key?
 
 <details><summary>show</summary>
@@ -298,6 +319,11 @@ EOF
 
 </p>
 </details>
+
+***
+
+# Bootstrapping the etcd Cluster
+
 
 ***
 
@@ -409,6 +435,10 @@ sudo ETCDCTL_API=3 etcdctl member list \
 
 </p>
 </details>
+
+***
+
+# Bootstrapping the Kubernetes Control Plane
 
 ***
 
@@ -563,6 +593,10 @@ curl -H "Host: kubernetes.default.svc.cluster.local" -i http://127.0.0.1/healthz
 
 </p>
 </details>
+
+***
+
+# Bootstrapping the Kubernetes Worker Nodes
 
 ***
 
@@ -1105,6 +1139,11 @@ kubectl get nodes
 
 ***
 
+# Provisioning Pod Network Routes
+
+
+***
+
 ## How can you enable pods to communicate with eachother?
 
 <details><summary>show</summary>
@@ -1159,6 +1198,9 @@ done
 </p>
 </details>
 
+***
+
+# Deploying the DNS Cluster Add-on
 
 
 ***
@@ -1210,6 +1252,9 @@ kubectl exec -ti $POD_NAME -- nslookup kubernetes
 </p>
 </details>
 
+***
+
+# Smoke Test
 
 ***
 
