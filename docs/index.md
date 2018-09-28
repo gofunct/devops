@@ -1081,3 +1081,361 @@ kubectl get nodes
 </p>
 </details>
 
+***
+
+## How can you enable pods to communicate with eachother?
+
+<details><summary>show</summary>
+<p>
+
+* Pods scheduled to a node receive an IP address from the node's Pod CIDR range. 
+
+**Create a route for each worker node that maps the node's Pod CIDR range to the node's internal IP address**
+
+</p>
+</details>
+
+
+***
+
+## Print the internal IP address and Pod CIDR range for each worker instance:
+
+
+
+<details><summary>show</summary>
+<p>
+
+```
+for instance in worker-0 worker-1 worker-2; do
+  gcloud compute instances describe ${instance} \
+    --format 'value[separator=" "](networkInterfaces[0].networkIP,metadata.items[0].value)'
+done
+```
+
+</p>
+</details>
+
+***
+
+## Create network routes for each worker instance:
+
+
+
+<details><summary>show</summary>
+<p>
+
+```
+for i in 0 1 2; do
+  gcloud compute routes create kubernetes-route-10-200-${i}-0-24 \
+    --network kubernetes-the-hard-way \
+    --next-hop-address 10.240.0.2${i} \
+    --destination-range 10.200.${i}.0/24
+done
+
+```
+
+</p>
+</details>
+
+
+
+***
+
+## How do you implement DNS based service discovery?
+
+<details><summary>show</summary>
+<p>
+  
+Deploy the DNS add-on which provides DNS based service discovery to applications running inside the Kubernetes cluster.
+
+**Deploy the kube-dns cluster add-on**
+
+```
+
+kubectl create -f https://storage.googleapis.com/kubernetes-the-hard-way/kube-dns.yaml
+
+```
+
+**List the pods created by the kube-dns deployment**
+
+
+```
+
+kubectl get pods -l k8s-app=kube-dns -n kube-system
+
+```
+
+
+</p>
+</details>
+
+
+***
+
+## How can you execute a DNS lookup for a kubernetes service inside a pod?
+
+
+
+<details><summary>show</summary>
+<p>
+
+```
+kubectl exec -ti $POD_NAME -- nslookup kubernetes
+
+
+```
+
+</p>
+</details>
+
+
+***
+
+## How can you encrypt secret data at rest?
+
+<details><summary>show</summary>
+<p>
+  
+  **Create a generic secret**
+
+```
+kubectl create secret generic kubernetes-the-hard-way \
+  --from-literal="mykey=mydata"
+
+```
+
+**Print a hexdump of the kubernetes-the-hard-way secret stored in etcd**
+
+```
+gcloud compute ssh controller-0 \
+  --command "sudo ETCDCTL_API=3 etcdctl get \
+  --endpoints=https://127.0.0.1:2379 \
+  --cacert=/etc/etcd/ca.pem \
+  --cert=/etc/etcd/kubernetes.pem \
+  --key=/etc/etcd/kubernetes-key.pem\
+  /registry/secrets/default/kubernetes-the-hard-way | hexdump -C"
+
+
+```
+
+The etcd key should be prefixed with k8s:enc:aescbc:v1:key1, which indicates the aescbc provider was used to encrypt the data with the key1 encryption key.
+
+</p>
+</details>
+
+
+***
+
+## How can you enable port forwarding to an nginx deployment?
+
+<details><summary>show</summary>
+<p>
+
+**Create a deployment for the nginx web server**
+
+```
+kubectl run nginx --image=nginx
+```
+
+**List the pod created by the nginx deployment**
+
+```
+kubectl get pods -l run=nginx
+```
+
+**Retrieve the full name of the nginx pod**
+
+```
+POD_NAME=$(kubectl get pods -l run=nginx -o jsonpath="{.items[0].metadata.name}")
+
+```
+
+**Forward port 8080 on your local machine to port 80 of the nginx pod**
+
+```
+kubectl port-forward $POD_NAME 8080:80
+
+```
+
+**In a new terminal make an HTTP request using the forwarding address**
+
+```
+curl --head http://127.0.0.1:8080
+
+```
+
+</p>
+</details>
+
+## How do you retrieve logs from containers?
+
+<details><summary>show</summary>
+<p>
+    
+Print pod logs:
+
+```
+kubectl logs $POD_NAME
+
+```
+
+</p>
+</details>
+
+***
+
+## How can you print the nginx version by executing on the container?
+
+<details><summary>show</show>
+<p>
+  
+```
+kubectl exec -ti $POD_NAME -- nginx -v
+  
+```
+
+</p>
+</details
+
+***
+
+## How can you expose a pod using a service?
+
+<details><summary>show</show>
+<p>
+
+**Expose the nginx deployment using a NodePort service**
+
+```
+kubectl expose deployment nginx --port 80 --type NodePort
+```
+
+**Retrieve the node port assigned to the nginx service**
+
+```
+NODE_PORT=$(kubectl get svc nginx \
+  --output=jsonpath='{range .spec.ports[0]}{.nodePort}')
+```
+
+**Create a firewall rule that allows remote access to the nginx node port**
+
+```
+gcloud compute firewall-rules create kubernetes-the-hard-way-allow-nginx-service \
+  --allow=tcp:${NODE_PORT} \
+  --network kubernetes-the-hard-way
+```
+
+**Retrieve the external IP address of a worker instance**
+
+```
+EXTERNAL_IP=$(gcloud compute instances describe worker-0 \
+  --format 'value(networkInterfaces[0].accessConfigs[0].natIP)')
+```
+
+**Make an HTTP request using the external IP address and the nginx node port**
+
+```
+curl -I http://${EXTERNAL_IP}:${NODE_PORT}
+```
+
+
+</p>
+</details
+
+***
+
+## How do you verify the ability to run untrusted workloads using gVisor?
+
+<details><summary>show</show>
+<p>
+
+**Create the untrusted pod**
+
+```
+cat <<EOF | kubectl apply -f -
+apiVersion: v1
+kind: Pod
+metadata:
+  name: untrusted
+  annotations:
+    io.kubernetes.cri.untrusted-workload: "true"
+spec:
+  containers:
+    - name: webserver
+      image: gcr.io/hightowerlabs/helloworld:2.0.0
+EOF
+```
+
+**Verify the untrusted pod is running**
+
+```
+kubectl get pods -o wide
+```
+
+**Get the node name where the untrusted pod is running**
+
+```
+INSTANCE_NAME=$(kubectl get pod untrusted --output=jsonpath='{.spec.nodeName}')
+```
+
+**SSH into the worker node**
+
+```
+gcloud compute ssh ${INSTANCE_NAME}
+```
+
+**List the containers running under gVisor**
+
+```
+sudo runsc --root  /run/containerd/runsc/k8s.io list
+```
+
+**Get the ID of the untrusted pod**
+
+```
+POD_ID=$(sudo crictl -r unix:///var/run/containerd/containerd.sock \
+  pods --name untrusted -q)
+```
+
+**Get the ID of the webserver container running in the untrusted pod**
+
+```
+CONTAINER_ID=$(sudo crictl -r unix:///var/run/containerd/containerd.sock \
+  ps -p ${POD_ID} -q)
+```
+**Use the gVisor runsc command to display the processes running inside the webserver container**
+
+```
+sudo runsc --root /run/containerd/runsc/k8s.io ps ${CONTAINER_ID}
+```
+
+
+</p>
+</details
+
+***
+
+##
+
+<details><summary>show</show>
+<p>
+
+
+
+
+</p>
+</details
+
+
+***
+
+##
+
+<details><summary>show</show>
+<p>
+
+
+
+
+</p>
+</details
