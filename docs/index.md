@@ -1,44 +1,66 @@
-# Steps
-### Install Client Tools
-### Create Network Resources for VPC, Controllers, & Workers
-### Create Certificate Authority from json config
-### Create the following certificates from the certificate authority: 
-* admin-key.pem
-* admin.pem
-* worker-0-key.pem
-* worker-0.pem
-* worker-1-key.pem
-* worker-1.pem
-* worker-2-key.pem
-* worker-2.pem
-* kube-controller-manager-key.pem
-* kube-controller-manager.pem
-* kube-proxy-key.pem
-* kube-proxy.pem
-* kube-scheduler-key.pem
-* kube-scheduler.pem
-* kubernetes-key.pem
-* kubernetes.pem
-* service-account-key.pem
-* service-account.pem
+# Certified Kubernetes Administrator Exam Prep
+by: Coleman Word
 
-### Create Authentication Configs from the Certificates
-Generate kubeconfig files for the:
-* controller manager 
-* kubelet
-* kube-proxy 
-* scheduler cliente
-* the admin user
+**Based on Kubernetes the Hard Way**
 
-### Generate an encryption key
-### Generate the encryption config from the encryption key
-### Copy the encryption config to the controllers
-### Configure & Start etcd on all controllers
-### Bootstrap the Controllers
-### Bootstrap the Worker Nodes
+- [Certified Kubernetes Administrator Exam Prep](#certified-kubernetes-administrator-exam-prep)
+- [Overview](#overview)
+- [Questions](#questions)
+  - [Certificate files are generated from..?](#certificate-files-are-generated-from)
+  - [Certificate authority is generated from..?](#certificate-authority-is-generated-from)
+  - [The kube-proxy, kube-controller-manager, kube-scheduler, and kubelet client certificates will be used to..?](#the-kube-proxy-kube-controller-manager-kube-scheduler-and-kubelet-client-certificates-will-be-used-to)
+  - [What keys are copied to workers?](#what-keys-are-copied-to-workers)
+  - [What keys are copied to the controllers?](#what-keys-are-copied-to-the-controllers)
+  - [What configs are copied to the workers?](#what-configs-are-copied-to-the-workers)
+  - [What kubeconfigs are copied to the controllers?](#what-kubeconfigs-are-copied-to-the-controllers)
+  - [How do you generate kubeconfig files from certificates using kubectl?](#how-do-you-generate-kubeconfig-files-from-certificates-using-kubectl)
+  - [How do you generate an encryption key?](#how-do-you-generate-an-encryption-key)
+  - [How do you generate an encryption configuration for controllers?](#how-do-you-generate-an-encryption-configuration-for-controllers)
+  - [What is etcd used for?](#what-is-etcd-used-for)
+  - [How do you configure the etcd server?](#how-do-you-configure-the-etcd-server)
+  - [How do you create the Kubernetes config directory?](#how-do-you-create-the-kubernetes-config-directory)
+  - [What should you move to /usr/local/bin when bootstrapping the control plane?](#what-should-you-move-to-usrlocalbin-when-bootstrapping-the-control-plane)
+  - [What should be moved to /var/lib/kubernetes when bootstrapping the control plane?](#what-should-be-moved-to-varlibkubernetes-when-bootstrapping-the-control-plane)
+  - [What should you move to /etc/systemd/system/ when bootstraping the controle plane?](#what-should-you-move-to-etcsystemdsystem-when-bootstraping-the-controle-plane)
+  - [How do you start the controller services?](#how-do-you-start-the-controller-services)
+  - [What do you need for controller health-checks?](#what-do-you-need-for-controller-health-checks)
+  - [Why do you need RBAC for kubelet on worker nodes?](#why-do-you-need-rbac-for-kubelet-on-worker-nodes)
+  - [What do you need to create to let the Kubernetes API server on the controllers communicate with the kubelet api on each worker?](#what-do-you-need-to-create-to-let-the-kubernetes-api-server-on-the-controllers-communicate-with-the-kubelet-api-on-each-worker)
+  - [A ClusterRole must be bound between what to components to activate communication between the Kubernetes API and the kubelet api?](#a-clusterrole-must-be-bound-between-what-to-components-to-activate-communication-between-the-kubernetes-api-and-the-kubelet-api)
+  - [What should the external load balancer attach to?](#what-should-the-external-load-balancer-attach-to)
+  - [After setting up the external load balancer, how can you check the Kubernetes version info?](#after-setting-up-the-external-load-balancer-how-can-you-check-the-kubernetes-version-info)
+  - [What needs to be installed on each worker node to bootstrap?](#what-needs-to-be-installed-on-each-worker-node-to-bootstrap)
+  - [What do you need to do to configure CNI plugins?](#what-do-you-need-to-do-to-configure-cni-plugins)
+  - [How do you need to configure the CNI containerd?](#how-do-you-need-to-configure-the-cni-containerd)
+  - [How do you configure the Kubelet when bootstraping the worker nodes?](#how-do-you-configure-the-kubelet-when-bootstraping-the-worker-nodes)
+  - [What components are being added to what directories when bootsrapping worker nodes?](#what-components-are-being-added-to-what-directories-when-bootsrapping-worker-nodes)
+  - [How do you start worker services after bootsraping them?](#how-do-you-start-worker-services-after-bootsraping-them)
+  - [How do you verify that the worker bootstrap was successful?](#how-do-you-verify-that-the-worker-bootstrap-was-successful)
+- [Configuring Kubectl for Remote Access](#configuring-kubectl-for-remote-access)
+  - [What does each config file point to?](#what-does-each-config-file-point-to)
+  - [How do you Generate a kubeconfig file suitable for authenticating as the admin user?](#how-do-you-generate-a-kubeconfig-file-suitable-for-authenticating-as-the-admin-user)
+  - [How can you check cluster health after setting up the config for remote admin auth?](#how-can-you-check-cluster-health-after-setting-up-the-config-for-remote-admin-auth)
+  - [How can you enable pods to communicate with eachother?](#how-can-you-enable-pods-to-communicate-with-eachother)
+  - [Print the internal IP address and Pod CIDR range for each worker instance:](#print-the-internal-ip-address-and-pod-cidr-range-for-each-worker-instance)
+  - [Create network routes for each worker instance:](#create-network-routes-for-each-worker-instance)
+  - [How do you implement DNS based service discovery?](#how-do-you-implement-dns-based-service-discovery)
+  - [How can you execute a DNS lookup for a kubernetes service inside a pod?](#how-can-you-execute-a-dns-lookup-for-a-kubernetes-service-inside-a-pod)
+  - [How can you encrypt secret data at rest?](#how-can-you-encrypt-secret-data-at-rest)
+  - [How can you enable port forwarding to an nginx deployment?](#how-can-you-enable-port-forwarding-to-an-nginx-deployment)
+  - [How do you retrieve logs from containers?](#how-do-you-retrieve-logs-from-containers)
+  - [How can you print the nginx version by executing on the container?](#how-can-you-print-the-nginx-version-by-executing-on-the-container)
+  - [How can you expose a pod using a service?](#how-can-you-expose-a-pod-using-a-service)
+  - [How do you verify the ability to run untrusted workloads using gVisor?](#how-do-you-verify-the-ability-to-run-untrusted-workloads-using-gvisor)
+  - [](#)
+  - [](#)
+
+***
+# Overview
 
 
-# Study
+***
+
+# Questions
 
 ***
 
