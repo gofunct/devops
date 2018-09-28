@@ -60,8 +60,6 @@ by: Coleman Word
   - [How can you print the nginx version by executing on the container?](#how-can-you-print-the-nginx-version-by-executing-on-the-container)
   - [How can you expose a pod using a service?](#how-can-you-expose-a-pod-using-a-service)
   - [How do you verify the ability to run untrusted workloads using gVisor?](#how-do-you-verify-the-ability-to-run-untrusted-workloads-using-gvisor)
-  - [](#)
-  - [](#)
 
 ***
 # Overview
@@ -1482,27 +1480,4 @@ sudo runsc --root /run/containerd/runsc/k8s.io ps ${CONTAINER_ID}
 
 ***
 
-##
 
-<details><summary>show</show>
-<p>
-
-
-
-
-</p>
-</details
-
-
-***
-
-##
-
-<details><summary>show</show>
-<p>
-
-
-
-
-</p>
-</details
