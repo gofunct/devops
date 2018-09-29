@@ -1,1 +1,3 @@
-# Coming Soon!
+# Fundamentals of Golang Programming
+by: Coleman Word
+**Coming Soon**
