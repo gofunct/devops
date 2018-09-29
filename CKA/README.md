@@ -26,7 +26,7 @@ by: Coleman Word
   - [How do you create the Kubernetes config directory?](#how-do-you-create-the-kubernetes-config-directory)
   - [What should you move to /usr/local/bin when bootstrapping the control plane?](#what-should-you-move-to-usrlocalbin-when-bootstrapping-the-control-plane)
   - [What should be moved to /var/lib/kubernetes when bootstrapping the control plane?](#what-should-be-moved-to-varlibkubernetes-when-bootstrapping-the-control-plane)
-  - [What should you move to /etc/systemd/system/ when bootstraping the controle plane?](#what-should-you-move-to-etcsystemdsystem-when-bootstraping-the-controle-plane)
+  - [What should you move to /etc/systemd/system/ when bootstraping the control plane?](#what-should-you-move-to-etcsystemdsystem-when-bootstraping-the-controle-plane)
   - [How do you start the controller services?](#how-do-you-start-the-controller-services)
   - [What do you need for controller health-checks?](#what-do-you-need-for-controller-health-checks)
 - [Bootstrapping the Kubernetes Worker Nodes](#bootstrapping-the-kubernetes-worker-nodes)
