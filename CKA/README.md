@@ -246,7 +246,7 @@ service-account.pem
 Example for kube-controller-manager:
 
 ```
-{
+
   kubectl config set-cluster kubernetes-the-hard-way \
     --certificate-authority=ca.pem \
     --embed-certs=true \
@@ -265,7 +265,7 @@ Example for kube-controller-manager:
     --kubeconfig=kube-controller-manager.kubeconfig
 
   kubectl config use-context default --kubeconfig=kube-controller-manager.kubeconfig
-}
+
 ```
 
 </p>
@@ -410,11 +410,9 @@ EOF
 
 ```
 
-{
   sudo systemctl daemon-reload
   sudo systemctl enable etcd
   sudo systemctl start etcd
-}
 
 ```
 
@@ -768,14 +766,12 @@ sudo mkdir -p \
 **Install the binaries**
 
 ```
-{
   chmod +x kubectl kube-proxy kubelet runc.amd64 runsc
   sudo mv runc.amd64 runc
   sudo mv kubectl kube-proxy kubelet runc runsc /usr/local/bin/
   sudo tar -xvf crictl-v1.0.0-beta.0-linux-amd64.tar.gz -C /usr/local/bin/
   sudo tar -xvf cni-plugins-amd64-v0.6.0.tgz -C /opt/cni/bin/
   sudo tar -xvf containerd-1.1.0.linux-amd64.tar.gz -C /
-}
 ```
 
 
@@ -961,7 +957,6 @@ RestartSec=5
 WantedBy=multi-user.target
 EOF
 
-
 ```
 
 </p>
@@ -1091,27 +1086,24 @@ gcloud compute ssh controller-0 \
 * set-context
 * use-context
 ```
-{
-  KUBERNETES_PUBLIC_ADDRESS=$(gcloud compute addresses describe kubernetes-the-hard-way \
-    --region $(gcloud config get-value compute/region) \
-    --format 'value(address)')
+KUBERNETES_PUBLIC_ADDRESS=$(gcloud compute addresses describe kubernetes-the-hard-way \
+  --region $(gcloud config get-value compute/region) \
+  --format 'value(address)')
 
-  kubectl config set-cluster kubernetes-the-hard-way \
-    --certificate-authority=ca.pem \
-    --embed-certs=true \
-    --server=https://${KUBERNETES_PUBLIC_ADDRESS}:6443
+kubectl config set-cluster kubernetes-the-hard-way \
+  --certificate-authority=ca.pem \
+  --embed-certs=true \
+  --server=https://${KUBERNETES_PUBLIC_ADDRESS}:6443
 
-  kubectl config set-credentials admin \
-    --client-certificate=admin.pem \
-    --client-key=admin-key.pem
+kubectl config set-credentials admin \
+  --client-certificate=admin.pem \
+  --client-key=admin-key.pem
 
-  kubectl config set-context kubernetes-the-hard-way \
-    --cluster=kubernetes-the-hard-way \
-    --user=admin
+kubectl config set-context kubernetes-the-hard-way \
+  --cluster=kubernetes-the-hard-way \
+  --user=admin
 
-  kubectl config use-context kubernetes-the-hard-way
-}
-
+kubectl config use-context kubernetes-the-hard-way
 ```
 
 </p>
@@ -1244,7 +1236,6 @@ kubectl get pods -l k8s-app=kube-dns -n kube-system
 ```
 kubectl exec -ti $POD_NAME -- nslookup kubernetes
 
-
 ```
 
 </p>
@@ -1279,7 +1270,6 @@ gcloud compute ssh controller-0 \
   --cert=/etc/etcd/kubernetes.pem \
   --key=/etc/etcd/kubernetes-key.pem\
   /registry/secrets/default/kubernetes-the-hard-way | hexdump -C"
-
 
 ```
 
