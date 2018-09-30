@@ -27,6 +27,7 @@ Finished:
 * Golang/Viper
 * Golang/Sup
 * Awesome/
+* GRPC
 
 Unfinished:
 * The rest (lol)
