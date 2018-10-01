@@ -1,12 +1,9 @@
-[![Gobot](https://raw.githubusercontent.com/hybridgroup/gobot-site/master/source/images/elements/gobot-logo-small.png)](http://gobot.io/)
+# GoBot Study Guide
 
-[![GoDoc](https://godoc.org/gobot.io/x/gobot?status.svg)](https://godoc.org/gobot.io/x/gobot)
-[![Build Status](https://travis-ci.org/hybridgroup/gobot.png?branch=dev)](https://travis-ci.org/hybridgroup/gobot)
-[![Build status](https://ci.appveyor.com/api/projects/status/ix29evnbdrhkr7ud/branch/dev?svg=true)](https://ci.appveyor.com/project/deadprogram/gobot/branch/dev)
-[![Coverage Status](https://codecov.io/gh/hybridgroup/gobot/branch/dev/graph/badge.svg)](https://codecov.io/gh/hybridgroup/gobot)
-[![Go Report Card](https://goreportcard.com/badge/hybridgroup/gobot)](https://goreportcard.com/report/hybridgroup/gobot)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://github.com/hybridgroup/gobot/blob/master/LICENSE.txt)
-[![Gitter chat](https://badges.gitter.im/gitterHQ/gitter.png)](https://gitter.im/hybridgroup/gobot)
+## What is GoBot?
+
+<details><summary>show</summary>
+<p>
 
 Gobot (http://gobot.io/) is a framework using the Go programming language (http://golang.org/) for robotics, physical computing, and the Internet of Things.
 
@@ -16,13 +13,25 @@ Want to use Javascript robotics? Check out our sister project Cylon.js (http://c
 
 Want to use Ruby on robots? Check out our sister project Artoo (http://artoo.io)
 
+</p>
+</details>
+
 ## Getting Started
 
+<details><summary>show</summary>
+<p>
+
 Get the Gobot source with: `go get -d -u gobot.io/x/gobot/...`
+
+</p>
+</details>
 
 ## Examples
 
 #### Gobot with Arduino
+
+<details><summary>show</summary>
+<p>
 
 ```go
 package main
@@ -55,7 +64,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### Gobot with Sphero
+
+<details><summary>show</summary>
+<p>
 
 ```go
 package main
@@ -88,7 +103,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### "Metal" Gobot
+
+<details><summary>show</summary>
+<p>
 
 You can use the entire Gobot framework as shown in the examples above ("Classic" Gobot), or you can pick and choose from the various Gobot packages to control hardware with nothing but pure idiomatic Golang code ("Metal" Gobot). For example:
 
@@ -182,7 +203,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ## Hardware Support
+
+<details><summary>show</summary>
+<p>
+
 Gobot has a extensible system for connecting to hardware devices. The following robotics and physical computing platforms are currently supported:
 
 - [Arduino](http://www.arduino.cc/) <=> [Package](https://github.com/hybridgroup/gobot/tree/master/platforms/firmata)
@@ -306,7 +334,13 @@ a shared set of drivers provided using the `gobot/drivers/spi` package:
 
 More platforms and drivers are coming soon...
 
+</p>
+</details>
+
 ## API:
+
+<details><summary>show</summary>
+<p>
 
 Gobot includes a RESTful API to query the status of any robot running within a group, including the connection and device status, and execute device commands.
 
@@ -328,8 +362,18 @@ You can also specify the api host and port, and turn on authentication:
 
 You may access the [robeaux](https://github.com/hybridgroup/robeaux) React.js interface with Gobot by navigating to `http://localhost:3000/index.html`.
 
+</p>
+</details>
+
 ## CLI
+
+<details><summary>show</summary>
+<p>
+
 
 Gobot uses the Gort [http://gort.io](http://gort.io) Command Line Interface (CLI) so you can access important features right from the command line. We call it "RobotOps", aka "DevOps For Robotics". You can scan, connect, update device firmware, and more!
 
 Gobot also has its own CLI to generate new platforms, adaptors, and drivers. You can check it out in the `/cli` directory.
+
+</p>
+</details>

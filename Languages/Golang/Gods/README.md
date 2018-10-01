@@ -1,10 +1,12 @@
-[![GoDoc](https://godoc.org/github.com/emirpasic/gods?status.svg)](https://godoc.org/github.com/emirpasic/gods) [![Build Status](https://travis-ci.org/emirpasic/gods.svg)](https://travis-ci.org/emirpasic/gods) [![Go Report Card](https://goreportcard.com/badge/github.com/emirpasic/gods)](https://goreportcard.com/report/github.com/emirpasic/gods) [![PyPI](https://img.shields.io/pypi/l/Django.svg?maxAge=2592000)](https://github.com/emirpasic/gods/blob/master/LICENSE)
-
-# GoDS (Go Data Structures)
+# GoDS (Go Data Structures) Study Guide
 
 Implementation of various data structures and algorithms in Go.
 
 ## Data Structures
+
+<details><summary>show</summary>
+<p>
+
 
 - [GoDS (Go Data Structures)](#gods-go-data-structures)
     - [Data Structures](#data-structures)
@@ -55,8 +57,13 @@ Implementation of various data structures and algorithms in Go.
         - [Sponsors](#sponsors)
     - [<a href="https://www.browserstack.com/?ref=gods"><img src="http://www.hajdarevic.net/browserstack.svg" alt="BrowserStack" width="250"/></a>](#a-href%22httpswwwbrowserstackcomrefgods%22img-src%22httpwwwhajdarevicnetbrowserstacksvg%22-alt%22browserstack%22-width%22250%22a)
 
+</p>
+</details>
 
 ## Containers
+
+<details><summary>show</summary>
+<p>
 
 All data structures implement the container interface with the following methods:
 
@@ -122,7 +129,14 @@ type List interface {
 }
 ```
 
+</p>
+</details>
+
 #### ArrayList
+
+<details><summary>show</summary>
+<p>
+
 
 A [list](#lists) backed by a dynamic array that grows and shrinks implicitly.
 
@@ -159,7 +173,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### SinglyLinkedList
+
+<details><summary>show</summary>
+<p>
 
 A [list](#lists) where each element points to the next element in the list.
 
@@ -196,7 +216,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### DoublyLinkedList
+
+<details><summary>show</summary>
+<p>
+
 
 A [list](#lists) where each element points to the next and previous elements in the list.
 
@@ -233,7 +260,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Sets
+
+<details><summary>show</summary>
+<p>
+
 
 A set is a data structure that can store elements and has no repeated values. It is a computer implementation of the mathematical concept of a finite set. Unlike most other collection types, rather than retrieving a specific element from a set, one typically tests an element for membership in a set. This structure is often used to ensure that no duplicates are present in a container.
 
@@ -280,7 +314,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### TreeSet
+
+<details><summary>show</summary>
+<p>
+
 
 A [set](#sets) backed by a [red-black tree](#redblacktree) to keep the elements ordered with respect to the [comparator](#comparator).
 
@@ -307,7 +348,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### LinkedHashSet
+
+<details><summary>show</summary>
+<p>
+
 
 A [set](#sets) that preserves insertion-order. Data structure is backed by a hash table to store values and [doubly-linked list](#doublylinkedlist) to store insertion ordering.
 
@@ -335,7 +383,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Stacks
+
+<details><summary>show</summary>
+<p>
 
 A stack that represents a last-in-first-out (LIFO) data structure. The usual push and pop operations are provided, as well as a method to peek at the top item on the stack.
 
@@ -355,7 +409,13 @@ type Stack interface {
 }
 ```
 
+</p>
+</details>
+
 #### LinkedListStack
+
+<details><summary>show</summary>
+<p>
 
 A [stack](#stacks) based on a [linked list](#singlylinkedlist).
 
@@ -382,7 +442,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### ArrayStack
+
+<details><summary>show</summary>
+<p>
 
 A [stack](#stacks) based on a [array list](#arraylist).
 
@@ -409,7 +475,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Maps
+
+<details><summary>show</summary>
+<p>
 
 A Map is a data structure that maps keys to values. A map cannot contain duplicate keys and each key can map to at most one value.
 
@@ -440,7 +512,14 @@ type BidiMap interface {
 }
 ```
 
+</p>
+</details>
+
 #### HashMap
+
+<details><summary>show</summary>
+<p>
+
 
 A [map](#maps) based on hash tables. Keys are unordered.
 
@@ -467,7 +546,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### TreeMap
+
+<details><summary>show</summary>
+<p>
 
 A [map](#maps) based on [red-black tree](#redblacktree). Keys are ordered  ordered with respect to the [comparator](#comparator).
 
@@ -498,7 +583,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### LinkedHashMap
+
+<details><summary>show</summary>
+<p>
 
 A [map](#maps) that preserves insertion-order. It is backed by a hash table to store values and [doubly-linked list](doublylinkedlist) to store ordering.
 
@@ -526,7 +617,13 @@ func main() {
 
 ```
 
+</p>
+</details>
+
 #### HashBidiMap
+
+<details><summary>show</summary>
+<p>
 
 A [map](#maps) based on two hashmaps. Keys are unordered.
 
@@ -555,7 +652,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### TreeBidiMap
+
+<details><summary>show</summary>
+<p>
 
 A [map](#maps) based on red-black tree. This map guarantees that the map will be in both ascending key and value order.  Other than key and value ordering, the goal with this structure is to avoid duplication of elements (unlike in [HashBidiMap](#hashbidimap)), which can be significant if contained elements are large.
 
@@ -587,7 +690,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Trees
+
+<details><summary>show</summary>
+<p>
+
 
 A tree is a widely used data data structure that simulates a hierarchical tree structure, with a root value and subtrees of children, represented as a set of linked nodes; thus no cyclic links.
 
@@ -603,7 +713,13 @@ type Tree interface {
 }
 ```
 
+</p>
+</details>
+
 #### RedBlackTree
+
+<details><summary>show</summary>
+<p>
 
 A red–black [tree](#trees) is a binary search tree with an extra bit of data per node, its color, which can be either red or black. The extra bit of storage ensures an approximately balanced tree by constraining how nodes are colored from any path from the root to the leaf. Thus, it is a data structure which is a type of self-balancing binary search tree.
 
@@ -669,7 +785,13 @@ func main() {
 
 Extending the red-black tree's functionality  has been demonstrated in the following [example](https://github.com/emirpasic/gods/blob/master/examples/redblacktreeextended/redblacktreeextended.go).
 
+</p>
+</details>
+
 #### AVLTree
+
+<details><summary>show</summary>
+<p>
 
 AVL [tree](#trees) is a self-balancing binary search tree. In an AVL tree, the heights of the two child subtrees of any node differ by at most one; if at any time they differ by more than one, rebalancing is done to restore this property. Lookup, insertion, and deletion all take O(log n) time in both the average and worst cases, where n is the number of nodes in the tree prior to the operation. Insertions and deletions may require the tree to be rebalanced by one or more tree rotations.
 
@@ -728,7 +850,14 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### BTree
+
+<details><summary>show</summary>
+<p>
+
 
 B-tree is a self-balancing tree data structure that keeps data sorted and allows searches, sequential access, insertions, and deletions in logarithmic time. The B-tree is a generalization of a binary search tree in that a node can have more than two children.
 
@@ -803,7 +932,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### BinaryHeap
+
+<details><summary>show</summary>
+<p>
 
 A binary heap is a [tree](#trees) created using a binary tree. It can be seen as a binary tree with two additional constraints:
 
@@ -854,11 +989,17 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ## Functions
 
 Various helper functions used throughout the library.
 
 ### Comparator
+
+<details><summary>show</summary>
+<p>
 
 Some data structures (e.g. TreeMap, TreeSet) require a comparator function to automatically keep their elements sorted upon insertion. This comparator is necessary during the initalization.
 
@@ -958,13 +1099,26 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Iterator
+
+<details><summary>show</summary>
+<p>
+
 
 All ordered containers have stateful iterators. Typically an iterator is obtained by _Iterator()_ function of an ordered container. Once obtained, iterator's _Next()_ function moves the iterator to the next element and returns true if there was a next element. If there was an element, then element's can be obtained by iterator's _Value()_ function. Depending on the ordering type, it's position can be obtained by iterator's _Index()_ or _Key()_ functions. Some containers even provide reversible iterators, essentially the same, but provide another extra _Prev()_ function that moves the iterator to the previous element and returns true if there was a previous element.
 
 Note: it is unsafe to remove elements from container while iterating.
 
+</p>
+</details>
+
 #### IteratorWithIndex
+
+<details><summary>show</summary>
+<p>
 
 An [iterator](#iterator) whose elements are referenced by an index.
 
@@ -991,7 +1145,13 @@ for it.Begin(); it.Next(); {
 }
 ```
 
+</p>
+</details>
+
 #### IteratorWithKey
+
+<details><summary>show</summary>
+<p>
 
 An [iterator](#iterator) whose elements are referenced by a key.
 
@@ -1018,7 +1178,13 @@ for it.Begin(); it.Next(); {
 }
 ```
 
+</p>
+</details>
+
 #### ReverseIteratorWithIndex
+
+<details><summary>show</summary>
+<p>
 
 An [iterator](#iterator) whose elements are referenced by an index. Provides all functions as [IteratorWithIndex](#iteratorwithindex), but can also be used for reverse iteration.
 
@@ -1039,7 +1205,13 @@ if it.Last() {
 }
 ```
 
+</p>
+</details>
+
 #### ReverseIteratorWithKey
+
+<details><summary>show</summary>
+<p>
 
 An [iterator](#iterator) whose elements are referenced by a key. Provides all functions as [IteratorWithKey](#iteratorwithkey), but can also be used for reverse iteration.
 
@@ -1060,11 +1232,17 @@ if it.Last() {
 }
 ```
 
+</p>
+</details>
+
 ### Enumerable
 
 Enumerable functions for ordered containers that implement [EnumerableWithIndex](#enumerablewithindex) or [EnumerableWithKey](#enumerablewithkey) interfaces.
 
 #### EnumerableWithIndex
+
+<details><summary>show</summary>
+<p>
 
 [Enumerable](#enumerable) functions for ordered containers whose values can be fetched by an index.
 
@@ -1175,7 +1353,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### EnumerableWithKey
+
+<details><summary>show</summary>
+<p>
 
 Enumerable functions for ordered containers whose values whose elements are key/value pairs.
 
@@ -1292,11 +1476,18 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Serialization
 
 All data structures can be serialized (marshalled) and deserialized (unmarshalled). Currently only JSON support is available.
 
 #### JSONSerializer
+
+<details><summary>show</summary>
+<p>
+
 
 Outputs the container into its JSON representation.
 
@@ -1343,7 +1534,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 #### JSONDeserializer
+
+<details><summary>show</summary>
+<p>
 
 Populates the container with elements from the input JSON representation.
 
@@ -1389,7 +1586,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Sort
+
+<details><summary>show</summary>
+<p>
 
 Sort is a general purpose sort function.
 
@@ -1412,7 +1615,13 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ### Container
+
+<details><summary>show</summary>
+<p>
 
 Container specific operations:
 
@@ -1439,13 +1648,25 @@ func main() {
 }
 ```
 
+</p>
+</details>
+
 ## Appendix
 
 ### Motivation
 
+<details><summary>show</summary>
+<p>
+
 Collections and data structures found in other languages: Java Collections, C++ Standard Template Library (STL) containers, Qt Containers, Ruby Enumerable etc.
 
+</p>
+</details>
+
 ### Goals
+
+<details><summary>show</summary>
+<p>
 
 **Fast algorithms**:
 
@@ -1479,7 +1700,13 @@ There is often a tug of war between speed and memory when crafting algorithms. W
 
 Thread safety is not a concern of this project, this should be handled at a higher level.
 
+</p>
+</details>
+
 ### Testing and Benchmarking
+
+<details><summary>show</summary>
+<p>
 
 This takes a while, so test within sub-packages:
 
@@ -1487,30 +1714,5 @@ This takes a while, so test within sub-packages:
 
 <p align="center"><img src="https://cloud.githubusercontent.com/assets/3115942/16892979/5e698d46-4b27-11e6-864b-cb2b865327b6.png" /></p>
 
-### Contributing
-
-Biggest contribution towards this library is to use it and give us feedback for further improvements and additions.
-
-For direct contributions, _pull request_ into master branch or ask to become a contributor.
-
-Coding style:
-
-```shell
-# Install tooling and set path:
-go get github.com/golang/lint/golint
-go get github.com/fzipp/gocyclo
-go get github.com/kisielk/errcheck
-export PATH=$PATH:$GOPATH/bin
-
-# Fix errors and warnings:
-go fmt ./... && gofmt -s -w . && go vet ./... && go get ./... && go test ./... && golint ./... && gocyclo -avg -over 15 . && errcheck ./...
-```
-
-### License
-
-This library is distributed under the BSD-style license found in the [LICENSE](https://github.com/emirpasic/gods/blob/master/LICENSE) file.
-
-### Sponsors
-
-## <a href="https://www.browserstack.com/?ref=gods"><img src="http://www.hajdarevic.net/browserstack.svg" alt="BrowserStack" width="250"/></a>
-[BrowserStack](https://www.browserstack.com/?ref=webhook) is a cloud-based cross-browser testing tool that enables developers to test their websites across various browsers on different operating systems and mobile devices, without requiring users to install virtual machines, devices or emulators.
+</p>
+</details>

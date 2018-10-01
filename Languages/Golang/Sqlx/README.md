@@ -1,6 +1,9 @@
-# sqlx
+# Sqlx Study Guide
 
-[![Build Status](https://travis-ci.org/jmoiron/sqlx.svg?branch=master)](https://travis-ci.org/jmoiron/sqlx) [![Coverage Status](https://coveralls.io/repos/github/jmoiron/sqlx/badge.svg?branch=master)](https://coveralls.io/github/jmoiron/sqlx?branch=master) [![Godoc](http://img.shields.io/badge/godoc-reference-blue.svg?style=flat)](https://godoc.org/github.com/jmoiron/sqlx) [![license](http://img.shields.io/badge/license-MIT-red.svg?style=flat)](https://raw.githubusercontent.com/jmoiron/sqlx/master/LICENSE)
+### What is Sqlx?
+
+<details><summary>show</summary>
+<p>
 
 sqlx is a library which provides a set of extensions on go's standard
 `database/sql` library.  The sqlx versions of `sql.DB`, `sql.TX`, `sql.Stmt`,
@@ -8,7 +11,14 @@ et al. all leave the underlying interfaces untouched, so that their interfaces
 are a superset on the standard ones.  This makes it relatively painless to
 integrate existing codebases using database/sql with sqlx.
 
-Major additional concepts are:
+</p>
+</details>
+
+### Major additional concepts are:
+
+<details><summary>show</summary>
+<p>
+
 
 * Marshal rows into structs (with embedded struct support), maps, and slices
 * Named parameter support including prepared statements
@@ -18,7 +28,14 @@ In addition to the [godoc API documentation](http://godoc.org/github.com/jmoiron
 there is also some [standard documentation](http://jmoiron.github.io/sqlx/) that
 explains how to use `database/sql` along with sqlx.
 
+</p>
+</details>
+
 ## Recent Changes
+
+<details><summary>show</summary>
+<p>
+
 
 * sqlx/types.JsonText has been renamed to JSONText to follow Go naming conventions.
 
@@ -28,7 +45,14 @@ active development currently.
 
 * Using Go 1.6 and below with `types.JSONText` and `types.GzippedText` can be _potentially unsafe_, **especially** when used with common auto-scan sqlx idioms like `Select` and `Get`. See [golang bug #13905](https://github.com/golang/go/issues/13905).
 
+</p>
+</details>
+
 ### Backwards Compatibility
+
+<details><summary>show</summary>
+<p>
+
 
 There is no Go1-like promise of absolute stability, but I take the issue seriously
 and will maintain the library in a compatible state unless vital bugs prevent me 
@@ -38,11 +62,24 @@ a wider API cleanup was done at the time of fixing.  It's possible this will hap
 in future;  if it does, a git tag will be provided for users requiring the old
 behavior to continue to use it until such a time as they can migrate.
 
+</p>
+</details>
+
 ## install
+
+<details><summary>show</summary>
+<p>
+
 
     go get github.com/jmoiron/sqlx
 
+</p>
+</details>
+
 ## issues
+
+<details><summary>show</summary>
+<p>
 
 Row headers can be ambiguous (`SELECT 1 AS a, 2 AS a`), and the result of
 `Columns()` does not fully qualify column names in queries like:
@@ -55,7 +92,14 @@ making a struct or map destination ambiguous.  Use `AS` in your queries
 to give columns distinct names, `rows.Scan` to scan them manually, or 
 `SliceScan` to get a slice of results.
 
+</p>
+</details>
+
 ## usage
+
+<details><summary>show</summary>
+<p>
+
 
 Below is an example which shows some common use cases for sqlx.  Check 
 [sqlx_test.go](https://github.com/jmoiron/sqlx/blob/master/sqlx_test.go) for more
@@ -182,3 +226,6 @@ func main() {
     rows, err = db.NamedQuery(`SELECT * FROM person WHERE first_name=:first_name`, jason)
 }
 ```
+
+</p>
+</details>

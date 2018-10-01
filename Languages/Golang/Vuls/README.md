@@ -1,28 +1,10 @@
-# Vuls: VULnerability Scanner
-
-[![Slack](https://img.shields.io/badge/slack-join-blue.svg)](http://goo.gl/forms/xm5KFo35tu)
-[![License](https://img.shields.io/github/license/future-architect/vuls.svg?style=flat-square)](https://github.com/future-architect/vuls/blob/master/LICENSE)
-[![Build Status](https://travis-ci.org/future-architect/vuls.svg?branch=master)](https://travis-ci.org/future-architect/vuls)
-[![Go Report Card](https://goreportcard.com/badge/github.com/future-architect/vuls)](https://goreportcard.com/report/github.com/future-architect/vuls)
-
-
-![Vuls-logo](img/vuls_logo.png)  
-
-Vulnerability scanner for Linux/FreeBSD, agentless, written in golang.  
-We have a slack team. [Join slack team](http://goo.gl/forms/xm5KFo35tu)  
-Twitter: [@vuls_en](https://twitter.com/vuls_en)
-
-![Vuls-Abstract](img/vuls-abstract.png)
-
-![Vulsrepo](https://raw.githubusercontent.com/usiusi360/vulsrepo/master/gallery/demo.gif)
-
-[![asciicast](https://asciinema.org/a/3y9zrf950agiko7klg8abvyck.png)](https://asciinema.org/a/3y9zrf950agiko7klg8abvyck)
-
-![Vuls-slack](img/vuls-slack-en.png)
-
-----
+# Vuls: VULnerability Scanner Study Guide
 
 # Abstract
+
+<details><summary>show</summary>
+<p>
+
 
 For a system administrator, having to perform security vulnerability analysis and software update on a daily basis can be a burden.
 To avoid downtime in production environment, it is common for system administrator to choose not to use the automatic update option provided by package manager and to perform update manually.
@@ -40,17 +22,31 @@ Vuls is a tool created to solve the problems listed above. It has the following 
 
 ![Vuls-Motivation](img/vuls-motivation.png)
 
+</p>
+</details>
+
 ----
 
 # Main Features
 
 ## Scan for any vulnerabilities in Linux/FreeBSD Server
 
+<details><summary>show</summary>
+<p>
+
+
 [Supports major Linux/FreeBSD](https://vuls.io/docs/en/supported-os.html)
 - Alpine, Ubuntu, Debian, CentOS, Amazon Linux, RHEL, Oracle Linux, SUSE Enterprise Linux and Raspbian, FreeBSD
 - Cloud, on-premise, Docker
 
+</p>
+</details>
+
 ##  High quality scan
+
+<details><summary>show</summary>
+<p>
+
 
 Vuls uses Multiple vulnerability databases
 - [NVD](https://nvd.nist.gov/)
@@ -68,7 +64,13 @@ Vuls uses Multiple vulnerability databases
 	- RHSA/ALAS/ELSA/FreeBSD-SA
 - Changelog
 
+</p>
+</details>
+
 ## Fast scan and Deep scan
+
+<details><summary>show</summary>
+<p>
 
 [Fast Scan](https://vuls.io/docs/en/architecture-fast-scan.html)
 - Scan without root privilege, no dependencies
@@ -90,7 +92,13 @@ Vuls uses Multiple vulnerability databases
     it's possible to create a list of all vulnerabilities that need to be fixed.
 - Sometimes load on the scan target server
 
+</p>
+</details>
+
 ## [Remote scan and Local scan](https://vuls.io/docs/en/architecture-remote-local.html)
+
+<details><summary>show</summary>
+<p>
 
 [Remote Scan](https://vuls.io/docs/en/architecture-remote-scan.html)
 - User is required to only setup one machine that is connected to other target servers via SSH
@@ -98,17 +106,35 @@ Vuls uses Multiple vulnerability databases
 [Local Scan](https://vuls.io/docs/en/architecture-local-scan.html)
 - If you don't want the central Vuls server to connect to each server by SSH, you can use Vuls in the Local Scan mode.
 
+</p>
+</details>
+
 ## **Dynamic** Analysis
+
+<details><summary>show</summary>
+<p>
 
 - It is possible to acquire the state of the server by connecting via SSH and executing the command. 
 - Vuls warns when the scan target server was updated the kernel etc. but not restarting it.
 
+</p>
+</details>
+
 ## [Scan middleware that are not included in OS package management](https://vuls.io/docs/en/usage-scan-non-os-packages.html)
+
+<details><summary>show</summary>
+<p>
 
 - Scan middleware, programming language libraries and framework for vulnerability
 - Support software registered in CPE
 
+</p>
+</details>
+
 ## MISC
+
+<details><summary>show</summary>
+<p>
 
 - Nondestructive testing
 - Pre-authorization is *NOT* necessary before scanning on AWS
@@ -118,10 +144,20 @@ Vuls uses Multiple vulnerability databases
 - Email and Slack notification is possible (supports Japanese language)
 - Scan result is viewable on accessory software, TUI Viewer on terminal or Web UI ([VulsRepo](https://github.com/usiusi360/vulsrepo)).
 
+</p>
+</details>
+
 ----
 
 # What Vuls Doesn't Do
 
+<details><summary>show</summary>
+<p>
+
+
 - Vuls doesn't update the vulnerable packages.
+
+</p>
+</details>
 
 ----
