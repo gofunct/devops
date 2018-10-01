@@ -1,4 +1,5 @@
 # Git Study Guide
+by: Coleman Word
 
 ***
 
