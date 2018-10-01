@@ -1,0 +1,72 @@
+Sheet 1: Titles and Descriptions
+
+,
+pathwayTitle,Title of the collection of scenarios
+title,Title the scenario
+description,"Description of the scenario, displayed on the intro screen"
+difficulty,"Provide users with a sense of the depth of content, displayed on the intro screen"
+time,"Provide users with an estimated time to complete, displayed on the intro screen"
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+,
+
+Sheet 1: Details Node
+
+,
+steps,Details for the scenario steps
+intro,Details for the intro screen
+finish,Details for the finish screen
+
+Sheet 1: Steps Node
+
+,
+title,Title for the step.
+text,Filename containing the body for the step.
+answer,Filename containing the answer body for the step.
+verify,Bash script to run to check if the user can proceed. More details here.
+courseData,Bash script to run in the background. More details here.
+code,Bash script to run in the foreground. More details here.
+
+Sheet 1: Intro/Finish Node
+
+,
+text,Filename containing the body for the screen.
+credits,"Display a link on the intro screen, useful for linking to blog post for giving credit."
+courseData,Bash script to run in the background. More details here.
+code,Bash script to run in the foreground. More details here.
+
+Sheet 1: Environment
+
+,,
+hideintro,Boolean field that control if the intro step is shown to the user. By default it is hidden in the embedded mode.,"Example:
+""environment"": { ""uilayout"": ""terminal"", ""hideintro"": false}"
+hidefinish,Boolean field that control if the finish step is shown to the user. By default it is hidden in the embedded mode.,"Example:
+""environment"": { ""uilayout"": ""terminal"", ""hidefinish"": true }"
+uisettings,"Especify the format of the files for syntax highlighting in the editor (useful when it doesn't recognize the extension you are using). The suported formats are: reactjs, makefile, dockerfile, dockercompose, csharp, javascript, golang, java and xml.","Example:
+""environment"": {""uisettings"": ""yaml""}"
+icon,"The icon for the scenario. The list of icons is at the home page. The possible values are: fa-docker, fa-weave, fa-kubernetes, fa-openshift, fa-dcos, fa-tensorflow, fa-runc, fa-coreos, fa-elixir, fa-csharp, fa-fsharp, fa-rlang, fa-golang, fa-java, fa-node and fa-ruby.","Example:
+""icon"": ""fa-node"""
+showdashboard,Should Dashboard tabs be shown in UI.,
+dashboards,"Easily provide links for accessing dashboard/UI ports running in the environment. When using the terminal-iframe layout, it also show the exposed port of the container, without the need of open a new window. You can specify the name, port and the host identifier.","To display a tab called App showing the port 8080 from the host host02:
+""dashboards"": [{ ""name"": ""App"", ""port"": 8080, ""host"": ""host02"" }"
+uilayout,The layout ID provided by Katacoda. More details here.,
+uimessage1,Message to display at the top of the interative terminal.,
+,,
+
+Sheet 1: Backend
+
+,
+imageid,Environment image id provided by Katacoda. More details here.
