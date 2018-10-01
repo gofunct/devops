@@ -10,16 +10,6 @@ by: Coleman Word    colemanword.dev@gmail.com
   
 Please note that this repo is solely intended to be a resource for studying open source tools and technologies. 
 
-***
-## Table of Contents
-
-- [Cloud Native Engineering](#cloud-native-engineering)
-    - [Table of Contents](#table-of-contents)
-    - [Assets](#assets)
-    - [CNCF](#cncf)
-    - [Languages](#languages)
-    - [Unix](#unix)
-    - [Utilities](#utilities)
 
 ***
 
