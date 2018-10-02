@@ -72,8 +72,11 @@ than useless, because not only does it not provide a reliable
 regression indicator, but it also costs a lot of subsequent debugging
 time, and delayed merges.
 
-<details><summary>show</summary>
-<p>
+</p>
+</details>
+
+
+
 
 ## Debugging
 
@@ -187,8 +190,10 @@ out, so that no results are produced.  Again, this is a lot less
 useful than a test that fails reliably within a minute or two when the
 system is not working correctly.
 
-<details><summary>show</summary>
-<p>
+</p>
+</details>
+
+
 
 ## Resiliency
 
