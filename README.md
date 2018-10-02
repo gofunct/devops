@@ -1,6 +1,8 @@
 # Cloud Native Engineering
 
-by: Coleman Word    colemanword.dev@gmail.com
+by: Coleman Word    
+
+colemanword.dev@gmail.com
 
 **WORK IN PROGRESS Date: 9/28/2018**
 
@@ -24,36 +26,36 @@ Please note that this repo is solely intended to be a resource for studying open
 ***
 
 ## [CNCF](https://github.com/gofunct/cloudnative-engineer/tree/dev/CNCF)
-* Docker
-* Etcd
-* GRPC
-* Kubernetes
-* Prometheus
+* Docker: Containers
+* Etcd: Key/Value Store
+* GRPC: RPC, mobile-first
+* Kubernetes: Container Orchestration, Platform
+* Prometheus: Monitoring
     
 ***
 
 ## [Languages](https://github.com/gofunct/cloudnative-engineer/tree/dev/Languages)
-* Golang
-* Bash
+* Golang: Backend Programming
+* Bash: Unix Scripting
     
 ***
 
 ## [Unix](https://github.com/gofunct/cloudnative-engineer/tree/dev/Unix)
-* Grep
-* Make
-* Sed
-* SSH
-* Systemd
-* OpenSSL
-* SELinux
+* Grep: Search
+* Make: Build/Run
+* Sed: Text Manipulation
+* SSH: Remote Administration
+* Systemd: Services
+* OpenSSL: Encryption
+* SELinux: Security
   
 ***
 
 ## [Utilities](https://github.com/gofunct/cloudnative-engineer/tree/dev/Utilities)
-* Documentation
-* Gerrit
-* Git
-* Katacoda
-* Snippetslab
-* VScode
-* Alfred
+* Documentation: Markdown
+* Gerrit: Code Review
+* Git: Version Control
+* Katacoda: Interactive Tutorials & Playground
+* Snippetslab: Snippets Manager
+* VScode: Integrated Development Environment
+* Alfred: MacOs Workflows, Snippets, Search Engine, & More
