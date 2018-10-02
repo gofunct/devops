@@ -34,7 +34,6 @@ Please note that this repo is solely intended to be a resource for studying open
 
 ## [Languages](https://github.com/gofunct/cloudnative-engineer/tree/dev/Languages)
 * Golang
-* Python
 * Bash
     
 ***
@@ -57,3 +56,4 @@ Please note that this repo is solely intended to be a resource for studying open
 * Katacoda
 * Snippetslab
 * VScode
+* Alfred
