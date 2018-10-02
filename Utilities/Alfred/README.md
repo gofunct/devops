@@ -358,3 +358,30 @@ P.S.: VirtualBox is a free external application, make sure to [download](https:/
 </p>
 </details>
 
+### SnippetsLab
+
+<details><summary>show</summary>
+<p>
+
+* To start using it, type snippet {query} in Alfred where {query} is your search term. Search results should appear automatically as you type.
+* Press Return to copy selected snippet to clipboard
+* Hold Option and press Return to open selected snippet in SnippetsLab
+* Hold Command and press Return to paste selected snippet to the frontmost app
+* Note: The key-bindings above are the default settings. You can customize them by changing SnippetsLab Preferences or editing the workflow.
+* Change the keyword used to activate searching
+* Open Alfred Preferences, choose Workflows
+* Select SnippetsLab from the left list
+* Double click on the Script Filter object
+* Enter your new keyword in the Keyword field
+* Change the key-bindings
+
+* The Alfred workflow uses the same settings for Return and Option-Return actions as the SnippetsLab Assistant. To swap those actions, follow the steps below.
+->
+Choose SnippetsLab > Preferences from the menubar
+->
+Click Assistant
+->
+Change the Primary Action drop-down menu to a desired value
+
+</p>
+</details>
