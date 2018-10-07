@@ -13,8 +13,9 @@ colemanword.dev@gmail.com
 Please note that this repo is solely intended to be a resource for studying open source tools and technologies. 
 
 ## Must-Use/Read Resources
-[Interactive Tutorials](https://www.katacoda.com/learn)
-[CNCF Projects](https://www.cncf.io/projects/)
+* [Interactive Tutorials](https://www.katacoda.com/learn)
+
+* [CNCF Projects](https://www.cncf.io/projects/)
 
 ***
 
