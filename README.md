@@ -15,7 +15,7 @@ Please note that this repo is solely intended to be a resource for studying open
 
 ***
 
-## [Assets](https://github.com/gofunct/cloudnative-engineer/tree/dev/Assets)
+## [Assets](https://github.com/gofunct/cloudnative-engineer/tree/master/Assets)
 * Articles 
 * Cheatsheets
 * Csv
@@ -25,7 +25,7 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [CNCF](https://github.com/gofunct/cloudnative-engineer/tree/dev/CNCF)
+## [CNCF](https://github.com/gofunct/cloudnative-engineer/tree/master/CNCF)
 * Docker: Containers
 * Etcd: Key/Value Store
 * GRPC: RPC, mobile-first
@@ -34,7 +34,7 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [Languages](https://github.com/gofunct/cloudnative-engineer/tree/dev/Languages)
+## [Languages](https://github.com/gofunct/cloudnative-engineer/tree/master/Languages)
 * Golang: Backend Programming
 * Bash: Unix Scripting
     
@@ -51,7 +51,7 @@ Please note that this repo is solely intended to be a resource for studying open
   
 ***
 
-## [Utilities](https://github.com/gofunct/cloudnative-engineer/tree/dev/Utilities)
+## [Utilities](https://github.com/gofunct/cloudnative-engineer/tree/master/Utilities)
 * Documentation: Markdown
 * Gerrit: Code Review
 * Git: Version Control
