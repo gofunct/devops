@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://192.168.99.100:31112
+
+functions:
+  e2e:
+    lang: dockerfile
+    handler: ./e2e
+    image: e2e:latest

@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://192.168.99.100:31112
+
+functions:
+  vault:
+    lang: dockerfile
+    handler: ./vault
+    image: vault:latest
