@@ -9,7 +9,8 @@ If you wanted to create a version command you would create cmd/version.go and po
 <details><summary>show</summary>
 <p>
 
-```
+```go
+
 package cmd
 
 import (
@@ -31,7 +32,7 @@ var versionCmd = &cobra.Command{
   },
 }
 
-```golang
+```
 
 </p>
 </details>
@@ -45,7 +46,7 @@ A flag can be 'persistent' meaning that this flag will be available to the comma
 <details><summary>show</summary>
 <p>
 
-```golang 
+``` 
 
 rootCmd.PersistentFlags().BoolVarP(&Verbose, "verbose", "v", false, "verbose output")
 
@@ -63,7 +64,7 @@ A flag can also be assigned locally which will only apply to that specific comma
 <details><summary>show</summary>
 <p>
 
-```
+```go
 rootCmd.Flags().StringVarP(&Source, "source", "s", "", "Source directory to read from")
 
 ```
@@ -80,7 +81,7 @@ By default Cobra only parses local flags on the target command, any local flags 
 <details><summary>show</summary>
 <p>
 
-```
+```go
 command := cobra.Command{
   Use: "print [OPTIONS] [COMMANDS]",
   TraverseChildren: true,
