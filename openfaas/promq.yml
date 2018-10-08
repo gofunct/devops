@@ -1,0 +1,9 @@
+provider:
+  name: faas
+  gateway: http://localhost:8080
+
+functions:
+  promq:
+    lang: go
+    handler: ./promq
+    image: stefanprodan/openfaas-promq

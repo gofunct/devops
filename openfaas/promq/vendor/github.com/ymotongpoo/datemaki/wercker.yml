@@ -1,0 +1,11 @@
+box: google/golang
+
+build:
+  steps:
+    - setup-go-workspace
+    - wercker/golint
+    - script:
+      name: go test -test.v
+      code: |
+        go test
+
