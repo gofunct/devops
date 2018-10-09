@@ -2,6 +2,9 @@
 
 ## Overview
 
+<details><summary>show</summary>
+<p>
+
 Prometheus bunch of very useful functions like rate(), increase() & histogram_quantile().
 
 Adding metrics to your app is easy, just import ﻿prometheus client﻿ and register metrics HTTP handler `http.Handle("/metrics", promhttp.Handler())`
@@ -10,7 +13,13 @@ This one-liner adds HTTP /metrics endpoint to HTTP router.
 
 By default client exports memory usage, number of goroutines, gc information and other runtime information. 
 
+</p>
+</details>
+
 ## Using a Histogram
+
+<details><summary>show</summary>
+<p>
 
 A histogram is made up 3 counters:
 
@@ -22,9 +31,18 @@ Histogram buckets:
 
 * count how many times event value was less than or equal to the bucket’s value.
 
+</p>
+</details>
+
 ## Calculating Request Duration
 
+<details><summary>show</summary>
+<p>
+
 It turns out that client library allows you to create a timer using: prometheus.NewTimer(o Observer) and record duration using ObserveDuration() method. Provided Observer can be either Summary, Histogram or a Gauge.
+
+</p>
+</details>
 
 ## Histogram Example 
 
