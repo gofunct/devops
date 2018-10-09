@@ -22,6 +22,10 @@ Histogram buckets:
 
 * count how many times event value was less than or equal to the bucket’s value.
 
+## Calculating Request Duration
+
+It turns out that client library allows you to create a timer using: prometheus.NewTimer(o Observer) and record duration using ObserveDuration() method. Provided Observer can be either Summary, Histogram or a Gauge.
+
 ## Histogram Example 
 
 <details><summary>show</summary>
