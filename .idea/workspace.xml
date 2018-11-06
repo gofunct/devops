@@ -1,0 +1,853 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="45e9f045-4138-47ba-861c-e1459cd213e6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/Lile/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/grpc/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/.idea/openfaas.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/e2e.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/e2e/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/invocations/promql/total-invocations.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/kube-hunter.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/kube-hunter/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/manifests/namespace.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/Gopkg.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/Gopkg.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/client.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/handler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/handler_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/request.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/response.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/NOTICE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/docs.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/example/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/format.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/format_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/parse.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/parse_test.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promq/vendor/github.com/ymotongpoo/datemaki/wercker.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promql.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/promql/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/Program.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/function/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/function/Function.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/function/FunctionHandler.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/root.csproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/csharp/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/dockerfile/function/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/dockerfile/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go-armhf/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go-armhf/function/handler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go-armhf/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go-armhf/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go/function/handler.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go/main.go" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/go/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/entrypoint/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/entrypoint/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/entrypoint/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/entrypoint/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/entrypoint/src/main/java/com/openfaas/entrypoint/App.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/entrypoint/src/test/java/AppTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/function/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/function/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/function/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/function/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/function/src/main/java/com/openfaas/function/Handler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/function/src/test/java/HandlerTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/main/java/com/openfaas/model/IHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/main/java/com/openfaas/model/IRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/main/java/com/openfaas/model/IResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/main/java/com/openfaas/model/Request.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/main/java/com/openfaas/model/Response.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/main/java/com/openfaas/model/SampleHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/test/java/RequestTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/model/src/test/java/ResponseTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/java8/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-arm64/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-arm64/function/handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-arm64/function/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-arm64/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-arm64/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-arm64/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/build.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/function/handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/function/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node-armhf/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/.dockerignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/function/handler.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/function/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/node/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/function/composer.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/function/php-extension.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/function/src/Handler.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/index.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/php-extension.sh-example" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/readme.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/php7/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python-armhf/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python-armhf/function/handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python-armhf/function/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python-armhf/index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python-armhf/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python-armhf/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python/function/handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python/function/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python/index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/function/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/function/handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/function/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3-armhf/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/function/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/function/handler.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/function/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/index.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/requirements.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/python3/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/ruby/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/ruby/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/ruby/function/Gemfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/ruby/function/handler.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/ruby/index.rb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/template/ruby/template.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/terraform.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/terraform/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/vault.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/openfaas/vault/Dockerfile" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="112029266">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.1" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="go" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Go" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="go" value="1775" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Go" value="1775" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="docs">
+      <favorite_root url="file://$PROJECT_DIR$" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/go" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/go/spec" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/maps" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/arrays" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/methods" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/structs" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/channels" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/goroutines" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/spec/interfaces" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/spec/interfaces/interface" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/go/spec/interfaces/interface/main.go" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/go/spec/interfaces/no-interface" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/go/spec/interfaces/no-interface/main.go" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/go/fav-libs" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Sup" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Sup/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Web" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Web/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Gods" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Gods/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Sqlx" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Sqlx/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Vuls" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Vuls/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Cobra" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Cobra/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/GoBot" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/GoBot/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Viper" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Viper/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Web-Assembly" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/go/fav-libs/Web-Assembly/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/ssh" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/ssh/SSH.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/ssh/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/etcd" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/etcd/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/grpc" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/grpc/Examples" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/grpc/Examples/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/grpc/study.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/grpc/prometheus" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.idea" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/.idea/vcs.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/inspectionProfiles" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/cloudnative-engineer.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/docker" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/docker/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/utilities" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/utilities/Git" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Git/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/SQL" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/SQL/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/VScode" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/VScode/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/Katacoda" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Katacoda/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/Markdown" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Markdown/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/go.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/git.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/sed.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/sql.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/vim.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/grep.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/ipv4.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/ipv6.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/make.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/sql1.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/bash0.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/bash1.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/gofmt.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/linux.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/regex.pdf" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/regex.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/git-kb.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/python3.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/markdown.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/vscode-kb-linux.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/cheatsheets/vscode-kb-macos.png" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/LICENSE" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).json" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/03E828C5-A5E9-4422-8067-43DFFE08EA3F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/162F8402-49F7-4E6B-8D22-C793E75E6229.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/393346B9-D459-4A95-9EA1-DC0CA4098FA7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/5143D3AA-2485-4B1E-98E8-6CF26CE5D770.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/5A58FD27-85E6-4FB3-B123-CC7C2E6AB5CC.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/62603255-ADE5-4885-82B7-80F3E5DFE4D1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/69E19C80-E67C-4AC9-B041-D60F03A1283C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/6FB8D4C8-F9FB-4969-A59B-7401DAFA26BA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/7106D5AD-9233-4F7C-B2B1-6853053A5898.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/74B27280-89C5-4238-BDF7-BF0A32EE4854.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/77D22B32-C76A-4317-83B5-8BCB5D5C89E2.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/85FA82F4-A3F0-46B1-8F32-9ED1821C62E8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/8D003DD5-6D82-40EA-9654-BCB33126EC80.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/9C6BC196-2C6D-4773-8575-385AE20586D4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/A7E677F5-BC1B-46FC-89F1-4EB99F5DEF71.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/AD482E78-FB78-4FB6-B38A-D72618C9A922.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/AF465A3F-63C0-4934-A718-C331C1319EF1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/C0EADCEC-151F-498C-9FA7-6DA308A05440.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/D9FDDB58-263C-47BF-99DE-2753003DA423.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/F4153309-881C-4A81-94BE-9B1B707B5FE7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/Snippets/FCD5F48D-DC6C-4780-A386-6B4CA02378B4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/tags.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/folders.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/deletion.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/shortcuts.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/Database/smart groups.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/identifier" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-09-27).snippetslablibrary/version.plist" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/00A04F6D-8FF6-4D65-A0BE-9D63DCDE7FA2.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/019B0665-B084-4F25-B409-797C9D8D3B27.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/01FCBBDF-0C3D-4B54-B30D-977120941381.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/02138970-C339-4FA9-8340-1F1C3AFE3027.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/022D1589-5065-42A2-BD67-60E11D63A0A7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/02465B48-09B3-4E34-9C52-66F8DC24DA96.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0275ECA7-4862-457C-8417-4C0793954619.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/03E828C5-A5E9-4422-8067-43DFFE08EA3F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/043C21F7-3ADF-47C2-BEC4-8DC61CAF4CFF.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/05BECBB0-CC5A-42A5-AA5B-12D5461A86EF.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/06ACD97D-6456-40FF-BF87-3DC180577A0C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/072E6EEF-8331-4082-B069-C2D8D9BFFF39.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0750711C-DD0D-480E-A02F-4E2E4A4A4A21.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/076E15E7-B08D-415C-98AD-B96513654206.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/07D190E5-DB0E-4866-8B4D-7B28C773F652.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/08141BA5-0ECA-4B62-8810-A08FA345EE2A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/091BA906-FD6E-4821-98E9-D0BE6322F2A3.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/09269A5C-1498-4F5C-B891-FB681A76C238.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0A39A560-A707-46D2-89D1-4C442753C0E1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0B6A65E0-9F88-4092-951C-E1E57C4FA391.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0BC94C78-1F04-4858-9961-A179851BFBC2.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0C67BB18-C9FB-4C8B-BA7F-09F11D879985.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0C8543A3-D58E-4EEB-88AA-3F621D2173DC.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0D76A411-FF0E-4574-90F4-5B126C5586D4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0E9263E5-0E62-4FE6-9D3B-1EE72670F368.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/0F9B4E16-89BC-4CEB-AD99-5AE2FB07AE23.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/113933AA-157A-47BB-81B3-3649F51382B8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/12F6D597-6F3E-45F2-8D4B-08D8076BBACA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/13A8DD68-5EEC-48F8-B78E-A1EBD565545B.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/13B000FF-907B-4469-BB67-9DC06A3F84AD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/162F8402-49F7-4E6B-8D22-C793E75E6229.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1663C637-4BB7-4F5A-9DD3-90FABF224214.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/166F03ED-5B1B-4307-8CB5-DD1FFC56F8D9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/197C3D3A-81EE-4FA3-97E4-EC7458A551B6.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1A6CFDB3-B311-4523-8C49-6D3FAF72677D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1AC3CDE6-9B32-4085-B71A-98AF234DC702.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1B7B3469-7B10-406B-A129-47A0ED729B0D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1C13EEFD-8A18-4EBF-8D21-9F1EEB1B65A1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1C7952D6-E674-478E-99FF-716812D7350F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1CF4FBBC-177E-448F-98A2-4A9BCFB3F514.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1E8D7C0A-78F7-42E2-BB28-BA8B7E85E704.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/1F7407A4-047D-4A10-9D13-694CC8AC36E1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/2050E01C-C21D-4A49-8A66-5C8F7927E78D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/21A01B27-035D-4417-BFCA-41641BFB0C70.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/22B5CC79-72EB-44A2-9D38-DB094022BAA1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/231AF498-55EB-474D-BFD3-6EC6B90EFAED.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/25D1D6C1-74F7-4981-BEBE-F52811D3F5BE.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/27202777-C920-4EB9-9EBC-2944AC23A774.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/28A2A51E-DDE1-43A7-88D9-9B474E759DEA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/2C5B2AAD-54CE-402B-8D65-15CC56485B9D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/2CDFEBBA-4F0E-4C37-B308-509EAB2DC533.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/2FB0AFB3-AD03-45E7-BCB3-B71B9B93562C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/3340FDE5-C041-4FB9-BD10-315C3B669A54.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/35772243-80C3-4664-B1F3-C14FABAE745C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/35910A9F-7275-4E4A-A641-466BB3B4D208.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/35BFE59C-A531-4387-8C13-DA6C5CBA2E10.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/3807D509-541A-4D1B-AE0B-BEDD06077DFB.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/393346B9-D459-4A95-9EA1-DC0CA4098FA7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/3AE3A49D-0911-4536-BD34-C255ECB8FE88.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/3BDCB71B-EE18-4CCB-8C66-6DC9B8B92277.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/3ED64A26-0FA4-4AA0-A770-DC00284F823E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4122935B-81A8-4023-8A68-823E776D8E69.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/41D48F8D-E799-4AE4-A943-569AEFAC0B38.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/436DEF94-5674-4F2C-B545-4BA5E3335F53.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/46954E8B-6F41-4BFF-9806-C4C580EDA52C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/46CBE8D3-1FF7-4522-AF03-E4E077999E68.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/47794E01-076B-49FE-8627-285358C652C1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/486B0A34-ADC4-49B9-AE1B-F2307243E271.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/486E26F8-0A36-45AA-B9DA-1FF252C34AFF.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/489B6BFD-5CE5-40C7-B9F5-302443E51B6C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/49097302-7A81-459D-8DB7-9BA0A0966473.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/49C42288-6885-4EE1-A28A-DF1A3976A3A4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4A1B8D42-E438-44B3-AD2D-C8835F816EBD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4A9448A8-BA35-4FF9-8B49-517923F2F978.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4B155813-CECF-4274-9060-7394F3D90C25.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4B990B10-CCD0-49B9-9F30-A9F84228875D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4C067E7C-8C40-4665-9744-4070520F340D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4D8731B7-CA78-45EE-AEB5-AB6BB5991155.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4DF44741-7A73-4CF8-B37A-78202BD082E8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4F56E85C-962B-4FBD-815D-716DCEA3C0E2.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/4FA74DFF-DDF2-434A-AA80-8540C8738A85.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/50679442-D6D0-4FF1-9041-0DF38CB4DD34.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5143D3AA-2485-4B1E-98E8-6CF26CE5D770.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/520D5CBA-B208-4525-B091-31DCE3E988DA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/528D461A-5541-4E5A-BD7E-A65E82A4203A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/54D10FD9-3486-4896-92AA-E6F68C0B6775.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/551D575B-427B-42F1-BE6B-232EA5E73340.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/579DF124-DA68-4B26-9765-74400AAA6A28.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/57D3C419-6682-45AE-A966-095B67350802.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5A58FD27-85E6-4FB3-B123-CC7C2E6AB5CC.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5BB79850-DD79-42C5-B022-056ACD873167.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5BBF4AE5-C200-45E4-8442-9037A662751C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5C6CFAD1-4302-4CBA-B721-4414ED945689.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5C800583-1982-4A50-B101-B770649F61C1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5CF5B17C-8632-440F-8AF6-3D22EA3FD0F8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5E30A894-67D5-4D22-8D4E-4EB68C07C457.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5F734B4D-992B-48DC-A687-BE88F057330B.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5F8812CD-89F4-47F7-996B-A687A04390B9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5FFBEF14-FA52-433E-A45A-14558CC25002.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/5FFDF793-E352-45E0-83F6-9B952325B20A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/60BACD5E-454D-4C89-99D6-BEA27C2681B5.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6222FA82-A44D-40E1-B494-F34EEDD603D8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/62603255-ADE5-4885-82B7-80F3E5DFE4D1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/633DAF2F-24F2-4F1E-BE95-2D86B32A083F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/64237E9E-FBB8-422E-9A75-EA79620449E0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/65077C72-1A6F-466D-AF43-DF0A5BAABADD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/650E87AA-9806-4D2E-AF0C-426D27B6AB36.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6575BDD5-12BB-418A-8ADE-DD5EDC61BAEA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/65976A46-CC8B-4C6F-A0C0-2E5E2F138732.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/65F31455-85CC-4971-82AD-3C22B85ED4A3.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6642D0A5-098D-4567-AA5F-175C02622C3D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/66F0BEE7-9D45-435D-AE73-A1F2279AFD41.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/680DF015-7F1A-43A2-89FB-87C080D1998F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/68DB0571-4426-4110-A189-14ACDDA97420.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/69405791-2D9D-4DCA-81E4-C04CCBE1278A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/69433768-D404-44DF-8A07-2350AB3A01A4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6955B4D5-E98B-43A5-9EAB-AE7FC9311723.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/69E19C80-E67C-4AC9-B041-D60F03A1283C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/69F6A793-3054-4345-8444-72C0603B4B61.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6B35BBEF-626F-46AB-8EC6-31167778F520.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6B74798C-A462-42E8-99B9-6846D95E6C4E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6DE57A1C-D0F8-4712-8520-70A482E1B20F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6DFD1056-D674-42FD-9F12-9663E885740A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6E93E8BB-CA1B-4A8C-8932-24984173A5DD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/6FB8D4C8-F9FB-4969-A59B-7401DAFA26BA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7021CE43-975E-424E-9FD8-F068F835EC31.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7099B27F-1A01-49CC-B4B6-43ED87BCD94E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/70C0FD5C-7E91-414A-BDEE-B9E3376B0176.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7106D5AD-9233-4F7C-B2B1-6853053A5898.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/72C7E528-DCE0-4A7F-A90B-0253842504CE.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/72EA2432-C36D-496E-9BEB-4A6999B6E046.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/74B27280-89C5-4238-BDF7-BF0A32EE4854.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/75B6A3ED-478D-4026-B413-BD7B654C8C2E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/75FE7B5C-3FE6-4838-A025-C30EEE863EA9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/761AFEFF-1964-4231-B089-BA53BFD5A7C1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/77D22B32-C76A-4317-83B5-8BCB5D5C89E2.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7834054E-85CE-4D66-BE32-F963BB9C77A4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7983193C-6234-4D98-9F90-514B8598BA0C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7992FC95-792C-433E-A483-192B0A9CBD14.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/79C002A0-2A80-4296-866C-320D438B5445.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7B538991-D9DA-45FD-A0D2-8DA3C452576F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7BFBD506-B3E3-4F48-9E80-80CC30BE562E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7C29B808-4949-412A-8E5E-4028764646E1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7D00258A-71F9-441D-9855-0F2CC470C081.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7DF0643A-4F44-4527-B949-7EDE5909AC30.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/7DF60FFA-D46B-40B7-B85A-F692BCCD1FF9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/820BC832-0774-4D25-9DF1-8DF954299A93.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/837E52F2-E6C3-44E3-B642-82E835BD06A9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/848C89C7-CB6E-48F6-B98D-25C6E8ECE88D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/85FA82F4-A3F0-46B1-8F32-9ED1821C62E8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/86262F24-4BAE-4109-B399-276B857A6140.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/863DE307-05C8-42C7-A637-D632FDEDD83F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8792B0C5-D4DD-45C8-B84D-385DB06302B2.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8813A4F6-DA67-4E98-95D9-E29DACC8C765.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/885B1DAC-E365-4F0B-AFCF-B5B69092788B.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8B1DA018-45C2-48AF-A90B-93869D75B70C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8BF2D418-C0B4-452D-BE83-4CE7AC3A76F6.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8D003DD5-6D82-40EA-9654-BCB33126EC80.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8D833DE1-F197-46A8-815F-AA37B39EE5D8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/8D934DC7-FF2D-45CA-BED4-3126F1B07C17.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/908453DD-9254-4B9C-9E05-9362D3352C82.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/91599392-1D57-4D29-A091-8DA89B205646.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9210F051-1E01-4BDB-B48B-60625757005E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/93EEB8FF-34D2-42D4-9F7B-5C6D7CE91E78.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/943654BC-B397-4B74-B6AE-AB16CB4E8EA8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9612033B-8F39-48B6-984A-FD28D01DC0DE.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9726246D-1191-4760-8D8B-A2D6BFA480BA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/975C2C8F-8392-49D1-A525-78C102EFB468.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/98084311-3A6E-4A71-A0F0-AD4B59A63CF0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/98F739E6-55CC-4AC6-9385-1E4AEBCCE28D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9B4D14A4-3EFA-4943-A2E3-DAEB2C51BB1F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9C1B765F-BA61-427D-A05F-F0CFE6F07E06.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9C6BC196-2C6D-4773-8575-385AE20586D4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9CA99944-78CE-4E9E-BF54-19ECCF40A5B1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9D481C24-9F78-4B27-B323-AF0AE3AACFFD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9DC2C8B0-CDC1-4C18-9E46-565B38B89CA3.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9E3D9AF4-F73D-4431-96CA-D955300E3AE6.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/9EFCE48E-4E75-4804-BED1-451E24D78C46.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A2F10C34-6045-4A8E-B5DB-BFE7FC969E98.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A3646360-F850-4EC5-9F1E-3DA3DA30CD73.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A3CDB5B4-8536-4D5F-9F7F-0C37F8E34233.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A646B0C9-378B-4623-9C68-02DAD7618B01.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A7E677F5-BC1B-46FC-89F1-4EB99F5DEF71.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A826031B-68EB-4810-82B8-79C9E65B0643.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A97027EB-2A1E-4917-BE1D-151A2117B00E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A9C3026C-E5D5-4F8D-9CBA-CAD9A4C7B30D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/A9EB9DBB-7BE4-4769-947F-B491731DE2B1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/ABE1D995-A1EF-467C-A3D1-E7005E156244.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/AC5CF912-B85C-417D-882E-0CA3D74B1BCD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/AC80CF2D-0C6B-4528-98FB-44CB0FAB29E3.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/AD482E78-FB78-4FB6-B38A-D72618C9A922.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/AE9AA209-A290-4192-B5B3-44A334D670D9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/AEDDC6F5-C6F5-45BB-A639-8C30877C1624.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/AF465A3F-63C0-4934-A718-C331C1319EF1.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B04F461D-1052-4F35-BC20-12885BBF79E3.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B0B11790-295E-4091-91BF-438EA0DD5AFA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B4C02E55-095D-4D07-A31A-29C8B975C706.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B75BB3AD-AF04-415E-B040-AEE2E53C9F4D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B86BC65B-48D6-4A6C-ACE3-36C45B83F57C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B8858996-8D29-41DE-ADF9-734B3FAF8A01.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B9DCA9AA-0980-48FE-9DCE-F675DD7806F8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/B9EE9CA1-F7BE-415C-A3F4-A48429F854F0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/BA76AFFA-AA62-46CD-B0F1-F8ECD7BB0E75.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/BC67446E-B434-4402-9CCD-CF371192851A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/BD7B96F4-DA52-49D5-A10E-8DF5B76F7319.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/BDE2973B-9C12-4EBB-A6C7-4C10929A8A5F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/BE9250F1-247D-4D98-816C-6817FF100AA4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/BFF0D1AB-3E37-4672-9F9D-0E1C2DB313DA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C0EADCEC-151F-498C-9FA7-6DA308A05440.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C31389F5-3374-4E61-B0E0-7C031F863D78.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C349252F-E39F-4179-B8D5-7011B8E3C598.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C47BF9BF-CD38-4319-8F7F-7ED1AABCB811.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C4F2348F-A6AD-4814-B7A8-C1AB324C154F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C5669CA4-68A7-4DAF-8E95-1159B108C77A.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C56A2366-3A70-4D0B-913C-78A8AA6EF838.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C5DEB5C0-2865-4DDA-A39D-6A2F651E6F72.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C7273DEB-34C8-48D8-87D8-756B07217F2E.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C8A8B2D8-ADB4-4987-8B30-67A32DA5C57C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/C8C7A35C-E586-4237-B014-9BCB46CE991D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/CA7E228F-8B93-43FF-85B6-9E2F5C0A4F6F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/CB45B712-755D-46AD-900F-DFB881E348E6.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/CD1D08F6-EE9E-4729-BACD-8940BC5F5505.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D046CE8E-3606-4E83-B619-781C4CC476DD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D09E69D1-BAE1-4A4B-8DF9-5AB0A1919581.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D0AFCF32-FBDB-4B3D-BFCA-76F87FB019CB.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D12923DF-C5CD-42FC-A099-FB05D7BEBDF5.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D543A198-F5ED-41F6-8448-85E6FAE02DC0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D617515A-4B3E-4692-979B-F8F2E4A55856.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D65BCE44-5D0B-4978-8017-1406D5BA391C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D7483147-E847-4076-9DB6-B4CA115EF6BD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D7E0D58A-74D9-42CA-87C6-39C8EF871993.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D8725380-33B0-45C1-8D7E-B6F709750CD4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/D9FDDB58-263C-47BF-99DE-2753003DA423.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/DCB206F2-8550-4841-A560-10F341899ECC.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/DD3400DD-F20A-4D95-8F92-D774735DDACA.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/DDFF41A5-57E4-4339-922B-B61803E06634.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/DE14FA63-FE42-4E11-870E-A9F590914C2C.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/DE4728F2-A5FE-4DA9-A19B-7AA323054021.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E2727183-EC0E-4CDF-BCCB-3B6ED9145CE0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E291061D-5FC9-49CF-94EA-7B288161FFC4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E2EB5090-1A13-4CB4-881A-4F718D7F5116.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E555CED9-5131-47DE-A142-162A2C39AEA8.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E726236B-5799-4F20-91EF-8D8E399AE3CE.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E740503D-A13E-4427-9EBD-B5D997AD4617.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E7945EC8-BDA9-4DEB-AA22-EBCC9CDB9125.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/E866F40F-00C8-443B-9F96-E30DCA3E5602.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/EBD0CA6D-DD73-4ABB-97E8-7B5ADFF90ED9.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/EC087375-9BFB-4AF1-A996-8AF44A013BE0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/EF3B3685-748F-42E7-B7EA-3F0AFA4D4958.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F063F1AB-3118-4997-9F13-B88C0FB98DD0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F15D197F-A8C7-409A-B0F9-1E13D9CDE6E4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F1823EFA-EC51-43AC-8B16-58D693F2C349.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F2DF73E6-0B1F-4CDA-A16C-80A6F0CE5D03.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F37DB237-F896-4B86-90BD-81DDE156E27D.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F4153309-881C-4A81-94BE-9B1B707B5FE7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F4FBBF19-B590-48C4-AC1E-32A60BE65760.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F66A0399-0E0E-4444-AADF-F79C5D47B046.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F6FD9F4F-8957-4098-8250-0B9E25F65149.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F70C2ED8-3496-43A4-A9B0-0419046E4220.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F8239CFD-852C-4ED4-8AE1-CF816B994FF3.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F82A3BCA-D763-4A92-9814-EC5D30082BE7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F91CBC6A-95CE-4311-8360-85E089D8EA61.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F99192A1-6E31-4D4D-A5FD-F307AC58C949.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/F9F5AEB7-F781-41A1-B9C9-1A43613449A5.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FA3EF9A8-2C81-4FB7-A111-B067C2452187.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FA6ACAAC-3EC6-4DE4-BA00-FCA610B83366.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FB998C4A-D64F-4419-B35F-98B8CF7F7DCD.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FBBF1336-A835-436A-B6BF-D9D2809C8481.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FBE141EA-F017-429D-A567-E9DBF44CE0CE.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FCAB8D60-2471-4B0C-8F6B-65C6BA9DABE0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FCC4AF15-3C30-49AE-AB5A-E72E2A939A4F.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FCD5F48D-DC6C-4780-A386-6B4CA02378B4.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FD14BA7C-9699-42A5-ADE2-042F21C6F0C7.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/Snippets/FF0F59B9-DBBF-4660-83DF-497D7262B5D0.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/tags.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/folders.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/deletion.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/shortcuts.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/Database/smart groups.data" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/identifier" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/utilities/Snippetslab/SnippetsLab (2018-10-02).snippetslablibrary/version.plist" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/utilities/flashcard.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/utilities/TextExpander" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/utilities/TextExpander/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/.gitignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        <favorite_root url="file://$PROJECT_DIR$/kubernetes" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/kubernetes/CKA.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/kubernetes/Heptio" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/kubernetes/Heptio/Ark" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/kubernetes/CKAD.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/kubernetes/Testing" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/kubernetes/Testing/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/kubernetes/Testing/Metrics.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            <favorite_root url="file://$PROJECT_DIR$/kubernetes/Testing/Framework.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/kubernetes/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/kubernetes/Ksonnet.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/prometheus" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/prometheus/example1.go" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/prometheus/kit-prometheus.go" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/prometheus/example-config.yml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/prometheus/request-duration.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/prometheus/example-grpc-client.go" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/opentracing" module="cloudnative-engineer" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/opentracing/README.md" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/pkg/http_utils/healthcheck.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="281">
+              <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-end-line="26" />
+              <folding>
+                <element signature="e#14#96#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <replaceStrings>
+      <replace>HealthCmd</replace>
+    </replaceStrings>
+  </component>
+  <component name="GOROOT" path="/usr/local/Cellar/go/1.11.1/libexec" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GoLibraries">
+    <option name="indexEntireGoPath" value="false" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/go/spec/interfaces/no-interface/main.go" />
+        <option value="$PROJECT_DIR$/go/spec/interfaces/interface/main.go" />
+        <option value="$PROJECT_DIR$/pkg/http/healthcheck.go" />
+        <option value="$PROJECT_DIR$/pkg/http_utils/healthcheck.go" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="947" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="cloudnative-engineer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudnative-engineer" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudnative-engineer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudnative-engineer" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cloudnative-engineer" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cloudnative-engineer" type="462c0819:PsiDirectoryNode" />
+              <item name="pkg" type="462c0819:PsiDirectoryNode" />
+              <item name="http_utils" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="configurable.Global.GOPATH.is.expanded" value="true" />
+    <property name="configurable.Project.GOPATH.is.expanded" value="true" />
+    <property name="go.gopath.indexing.explicitly.defined" value="true" />
+    <property name="go.sdk.automatically.set" value="true" />
+    <property name="go.vendoring.notification.had.been.shown" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="com.goide.configuration.GoLibrariesConfigurableProvider" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="23" width="1680" height="947" extended-state="0" />
+    <layout>
+      <window_info id="Favorites" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24969475" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Terminal" weight="0.32932693" />
+      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Favorites" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.24969475" />
+      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="0" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="1" visible="true" weight="0.32932693" />
+      <window_info anchor="bottom" id="Event Log" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="3" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Message" order="5" />
+      <window_info anchor="bottom" id="Find" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="11" />
+      <window_info anchor="right" id="Database" order="0" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="1" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/go/spec/interfaces/no-interface/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/go/spec/interfaces/interface/main.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="46" lean-forward="true" selection-end-line="31" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/http/healthcheck.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="20" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pkg/http_utils/healthcheck.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="281">
+          <caret line="25" column="33" lean-forward="true" selection-start-line="25" selection-end-line="26" />
+          <folding>
+            <element signature="e#14#96#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
