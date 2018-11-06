@@ -19,47 +19,64 @@ Please note that this repo is solely intended to be a resource for studying open
 
 ***
 
-## [Assets](https://github.com/gofunct/cloudnative-engineer/tree/master/Assets)
-* Articles 
-* Cheatsheets
-* Csv
-* Infographs
-* Logos
-* Snippets
-    
-***
+# [Katacoda](https://www.katacoda.com/learn)
 
-## [CNCF](https://github.com/gofunct/cloudnative-engineer/tree/master/CNCF)
-* Docker: Containers
-* Etcd: Key/Value Store
-* GRPC: RPC, mobile-first
-* Kubernetes: Container Orchestration, Platform
-* Prometheus: Monitoring
-    
-***
+* Interactive Tutorials & Playgrounds For CNCF Projects & More!
 
-## [Languages](https://github.com/gofunct/cloudnative-engineer/tree/master/Languages)
-* Golang: Backend Programming
-* Bash: Unix Scripting
-    
-***
+# [KubeDex](https://kubedex.com)
 
-## [Unix](https://github.com/gofunct/cloudnative-engineer/tree/dev/Unix)
-* Grep: Search
-* Make: Build/Run
-* Sed: Text Manipulation
-* SSH: Remote Administration
-* Systemd: Services
-* OpenSSL: Encryption
-* SELinux: Security
-  
-***
+* Discover, Compare, and Share Kubernetes Applications!
 
-## [Utilities](https://github.com/gofunct/cloudnative-engineer/tree/master/Utilities)
-* Documentation: Markdown
-* Gerrit: Code Review
-* Git: Version Control
-* Katacoda: Interactive Tutorials & Playground
-* Snippetslab: Snippets Manager
-* VScode: Integrated Development Environment
-* Alfred: MacOs Workflows, Snippets, Search Engine, & More
+# [MacOs](https://github.com/jaywcjlove/awesome-mac)
+
+* Curated List of Awesome MacOs Resources
+
+# [Golang](https://github.com/avelino/awesome-go)
+
+* Curated List of Awesome Golang Resources
+
+# [Kubernetes](https://github.com/ramitsurana/awesome-kubernetes)
+
+* Curated List of Awesome Kubernetes Resources
+
+# [Prometheus](https://github.com/roaldnefs/awesome-prometheus)
+
+* Curated List of Awesome Prometheus Resources
+
+# [GRPC](https://github.com/grpc-ecosystem/awesome-grpc)
+
+* Curated List of Awesome GRPC Resources
+
+# [Helm](https://github.com/cdwv/awesome-helm)
+
+* Curated List of Awesome Helm Resources
+
+
+# [Docker](https://github.com/veggiemonk/awesome-docker)
+
+* Curated List of Awesome Docker Resources
+
+
+# [Microservices](https://github.com/mfornos/awesome-microservices)
+
+* Curated List of Awesome Microservices Resources
+
+
+# [Git](https://github.com/dictcp/awesome-git)
+
+* Curated List of Awesome Git Resources
+
+
+# [Cloud-Native](https://github.com/rootsongjc/awesome-cloud-native)
+
+* Curated List of Awesome CNCF Resources
+
+
+# [VScode](https://github.com/viatsko/awesome-vscode)
+
+* Curated List of Awesome VSCode Resources
+
+
+# [Bash](https://github.com/awesome-lists/awesome-bash)
+
+* Curated List of Awesome Bash Resources
