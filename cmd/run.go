@@ -12,8 +12,9 @@ import (
 	"os"
 	"strings"
 	"time"
-
+	pb "github.com/gofunct/gofunct/protobuf"
 	"github.com/spf13/cobra"
+	"context"
 )
 
 // runCmd represents the run command
@@ -35,7 +36,7 @@ to quickly create a Cobra application.`,
 		reg.MustRegister(grpcMetrics)
 		// Create a insecure gRPC channel to communicate with the server.
 		conn, err := grpc.Dial(
-			fmt.Sprintf("localhost:%v", 9093),
+			fmt.Sprintf("localhost:%v", 3000),
 			grpc.WithUnaryInterceptor(grpcMetrics.UnaryClientInterceptor()),
 			grpc.WithStreamInterceptor(grpcMetrics.StreamClientInterceptor()),
 			grpc.WithInsecure(),
@@ -47,7 +48,7 @@ to quickly create a Cobra application.`,
 		defer conn.Close()
 
 		// Create a HTTP server for prometheus.
-		httpServer := &http.Server{Handler: promhttp.HandlerFor(reg, promhttp.HandlerOpts{}), Addr: fmt.Sprintf("0.0.0.0:%d", 9094)}
+		httpServer := &http.Server{Handler: promhttp.HandlerFor(reg, promhttp.HandlerOpts{}), Addr: fmt.Sprintf("0.0.0.0:%d", 3003)}
 
 		// Start your http server for prometheus.
 		go func() {
