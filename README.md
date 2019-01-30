@@ -25,7 +25,7 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [CNCF](https://github.com/gofunct/devops/tree/master/Cluster)
+## [Clustering](https://github.com/gofunct/devops/tree/master/Cluster)
 * Docker: Containers
 * Etcd: Key/Value Store
 * GRPC: RPC, mobile-first
@@ -34,7 +34,7 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [Languages](https://github.com/gofunct/devops/tree/master/Languages)
+## [Languages](https://github.com/gofunct/devops/tree/master/Language)
 * Golang: Backend Programming
 * Bash: Unix Scripting
     
