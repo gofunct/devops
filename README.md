@@ -2,24 +2,20 @@
 
 by: Coleman Word    
 
-colemanword.dev@gmail.com
+coleman.word@gofunct.com
 
-**WORK IN PROGRESS Date: 9/28/2018**
-
-**Check back periodically**
-
-**A Repository of Learning Materials**
+**A Repository of DevOps Learning Materials**
   
 Please note that this repo is solely intended to be a resource for studying open source tools and technologies. 
 
 ## Must-Use/Read Resources
 * [Interactive Tutorials](https://www.katacoda.com/learn)
-
+* [The Phoenix Project](https://www.amazon.com/Phoenix-Project-DevOps-Helping-Business/dp/1942788290/ref=sr_1_1/135-9925731-3074761?ie=UTF8&qid=1548867081&sr=8-1&keywords=the+phoenix+project)
 * [CNCF Projects](https://www.cncf.io/projects/)
 
 ***
 
-## [Assets](https://github.com/gofunct/cloudnative-engineer/tree/master/Assets)
+## [Assets](https://github.com/gofunct/devops/tree/master/Assets)
 * Articles 
 * Cheatsheets
 * Csv
@@ -29,7 +25,7 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [CNCF](https://github.com/gofunct/cloudnative-engineer/tree/master/CNCF)
+## [CNCF](https://github.com/gofunct/devops/tree/master/Cluster)
 * Docker: Containers
 * Etcd: Key/Value Store
 * GRPC: RPC, mobile-first
@@ -38,13 +34,13 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [Languages](https://github.com/gofunct/cloudnative-engineer/tree/master/Languages)
+## [Languages](https://github.com/gofunct/devops/tree/master/Languages)
 * Golang: Backend Programming
 * Bash: Unix Scripting
     
 ***
 
-## [Unix](https://github.com/gofunct/cloudnative-engineer/tree/dev/Unix)
+## [Unix](https://github.com/gofunct/devops/tree/master/Unix)
 * Grep: Search
 * Make: Build/Run
 * Sed: Text Manipulation
@@ -55,7 +51,7 @@ Please note that this repo is solely intended to be a resource for studying open
   
 ***
 
-## [Utilities](https://github.com/gofunct/cloudnative-engineer/tree/master/Utilities)
+## [Utilities](https://github.com/gofunct/devops/tree/master/Utilities)
 * Documentation: Markdown
 * Gerrit: Code Review
 * Git: Version Control
