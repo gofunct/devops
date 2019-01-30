@@ -25,7 +25,7 @@ Please note that this repo is solely intended to be a resource for studying open
     
 ***
 
-## [Clustering](https://github.com/gofunct/devops/tree/master/Cluster)
+## [Containers](https://github.com/gofunct/devops/tree/master/Cluster)
 * Docker: Containers
 * Etcd: Key/Value Store
 * GRPC: RPC, mobile-first
